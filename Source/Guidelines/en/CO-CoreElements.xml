@@ -369,7 +369,7 @@ boundaries are not explicitly marked (for example using the
 will rely on character class information to determine where they are
 to be found: some punctuation characters are considered to be
 word-breaking, while others are not. In XML, the newline character in
-text data is a kind of white space, and is therefore word
+text data is a kind of whitespace, and is therefore word
 breaking.  However, it is generally unsafe to assume that whitespace
 adjacent to markup tags will always be preserved, and it is decidedly
 unsafe to assume that markup tags themselves are equivalent to
@@ -378,7 +378,7 @@ whitespace. </p>
 <p> The <gi>lb</gi>, <gi>pb</gi>, and <gi>cb</gi> elements are notable
 exceptions to this general rule, since their function is precisely to
 represent (or replace) line, page, or column breaks, which, as noted
-above, are generally considered to be equivalent to white space. These
+above, are generally considered to be equivalent to whitespace. These
 elements provide a more reliable way of preserving the lineation,
 pagination, etc of a source document, since the encoder should not
 assume that (untagged) line breaks etc. in an XML source file will
@@ -386,7 +386,7 @@ necessarily be preserved. </p>
 
 <p>To control the intended tokenization, the encoder may use the
 <att>break</att> attribute on such elements to indicate whether or not
-the element is to be regarded as equivalent to white space. This
+the element is to be regarded as equivalent to whitespace. This
 attribute can take the values <val>yes</val> or <val>no</val> to
 indicate whether or not the element corresponds with a token
 boundary. The value <val>maybe</val> is also available, for cases
@@ -1336,7 +1336,7 @@ has been used to indicate responsibility for the correction. Its value (<val>#ms
   included), or one of the bibliographic elements described in <ptr target="#COBI"/>, if the correction has been taken from some other
   source. The <att>resp</att> attribute is
   available for all elements which are members of the <ident type="class">att.responsibility</ident> class. The same
-  class makes available a  <att>cert</att> attribute,which may be used
+  class makes available a  <att>cert</att> attribute, which may be used
   to indicate the degree of editorial
 confidence in a particular correction, as in the following example:
 <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#COEDCOR-eg-64">An <choice><corr cert="high">Autumn</corr><sic>Antony</sic></choice> it was,
@@ -2509,7 +2509,8 @@ applied not to a point but to a span of text,  not itself represented
 as a TEI element, the
 <att>target</att> attribute may use an appropriate pointer
 expression, for example using the <ident>range()</ident> function
-to specify the span of attachment. For further discussion of pointing
+to specify the span of attachment.</p>
+<p>For further discussion of pointing
 to points and spans in the text, see section <ptr target="#COXR"/>.</p>
 <p>In the following example, the <att>type</att> attribute is used to
 categorise the note as a gloss:
@@ -3378,7 +3379,7 @@ using structural elements such as <gi>sp</gi>, perhaps in order to
 avoid a clash of hierarchies.</p>
 <!-- example to be supplied by DS -->
 <p>As noted in <ptr target="#COPU-2"/> above, milestone elements such
-as <gi>lb</gi> or <gi>pb</gi> represent white space and are therefore
+as <gi>lb</gi> or <gi>pb</gi> represent whitespace and are therefore
 by default assumed to occur between orthographic tokens in the text, where
 these are not otherwise indicated.  By default it is reasonable to assume that
 words are not broken across page or line boundaries, and that
@@ -4025,7 +4026,7 @@ Processing</title>
 <ref type="url">http://xml.coverpages.org/coombs.html</ref>
 </biblStruct>
 </egXML>
-<p>Punctuation should not appear between the elements within a
+<p>Punctuation must not appear between the elements within a
 structured bibliographic entry encoded with <gi>biblStruct</gi> or <gi>biblFull</gi>,
 unless it is contained within the elements it delimits.  When (as in
 most of the examples in this chapter) entries are encoded without any

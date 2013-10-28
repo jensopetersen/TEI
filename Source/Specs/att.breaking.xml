@@ -16,7 +16,6 @@ $Id$
 consideré ou pas comme marquant la fin d'un mot orthographique, comme
 le fait une espace.</desc><attList>
     <attDef ident="break" usage="rec">
-      <equiv/>
       <desc>indicates whether or not the  element
 	bearing this attribute should be considered to mark the end of
 	an orthographic token in the same way as whitespace.</desc>
@@ -29,19 +28,19 @@ le fait une espace.</desc><attList>
 <valList>
 <valItem ident="yes"><desc>the element bearing this attribute is considered
 to mark the end of any adjacent orthographic token irrespective of the presence
-of any adjacent whitespace </desc>
+of any adjacent whitespace</desc>
 <desc xml:lang="fr">l'élément qui porte cet attribut
       peut être considéré comme  indiquant la fin d'un mot
-      orthographique </desc></valItem>
+      orthographique</desc></valItem>
 <valItem ident="no"><desc>the element bearing this attribute is considered
 not to mark the end of any adjacent orthographic token irrespective of the presence
-of any adjacent whitespace </desc>
+of any adjacent whitespace</desc>
 <desc xml:lang="fr">l'élément qui porte cet attribut
       ne peut être pas considéré comme  indiquant la fin d'un mot
-      orthographique </desc></valItem>
-<valItem ident="maybe"><desc  xml:lang="fr">l'encodage ne prends aucune position sur
-la question.</desc>
-<desc>the encoding does not take any position on this issue.</desc> </valItem>
+      orthographique</desc></valItem>
+  <valItem ident="maybe"><desc>the encoding does not take any position on this issue.</desc> 
+    <desc  xml:lang="fr">l'encodage ne prends aucune position sur la question.</desc>
+</valItem>
 </valList>
 
 <exemplum xml:lang="en"> <p>In the following lines from the <title level="a">Dream of the Rood</title>, 

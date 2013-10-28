@@ -18,10 +18,8 @@ $Id$
 module, i.e. a named and externally visible group of declarations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">하나의 모듈에 대한 구조, 내용 및 목적을 기록한다. 즉, 선언의 이름과 외부적으로 가시적인 그룹</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">記錄單一模組的結構、內容、以及用途，例如：一個已命名且外部明確的宣告組。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">
-  いちモジュールの構造，内容，目的を記録する．例えば，外部から名前で参
-  照可能な宣言集合などである．
-  </desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">いちモジュールの構造，内容，目的を記録する．例えば，外部から名前で参
+  照可能な宣言集合などである．</desc>
   <desc versionDate="2007-06-12" xml:lang="fr">documente la structure, le contenu et les
 			fonctions d'un module, i.e. d'un groupe de déclarations nommé et 
 			visible extérieurement.</desc>
@@ -34,43 +32,32 @@ module, i.e. a named and externally visible group of declarations.</desc>
       <memberOf key="att.typed"/>
   </classes>
   <content>
-      <rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
-         <rng:zeroOrMore>
-            <rng:ref name="model.glossLike"/>
-         </rng:zeroOrMore>
-         <rng:oneOrMore>
-            <rng:ref name="model.descLike"/>
-         </rng:oneOrMore>
-
-         <rng:zeroOrMore>
-            <rng:ref name="exemplum"/>
-         </rng:zeroOrMore>
-         <rng:optional>
-            <rng:ref name="remarks"/>
-         </rng:optional>
-         <rng:zeroOrMore>
-            <rng:ref name="listRef"/>
-         </rng:zeroOrMore>
-         <!--
-    <rng:zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
-      <rng:choice>
-	<rng:ref name="model.oddDecl"/>
-	<rng:ref name="model.oddRef"/>
-      </rng:choice>
-    </rng:zeroOrMore>-->
-    </rng:group>
+    <group xmlns="http://relaxng.org/ns/structure/1.0">
+      <zeroOrMore>
+        <choice>
+          <ref name="model.glossLike"/>
+          <ref name="model.descLike"/>
+        </choice>
+      </zeroOrMore>      
+      <zeroOrMore>
+	<ref name="exemplum"/>
+      </zeroOrMore>
+      <optional>
+	<ref name="remarks"/>
+      </optional>
+      <zeroOrMore>
+	<ref name="listRef"/>
+      </zeroOrMore>
+    </group>
   </content>
    <!-- MDH: this element added to att.typed 2012-02-16. 
      See http://purl.org/TEI/BUGS/3486352  -->
   <!--<attList>
     <attDef ident="type" usage="opt">
-      <equiv/>
       <desc>type of module to be generated</desc>
       <desc versionDate="2007-12-20" xml:lang="ko">생성된 모듈의 유형</desc>
       <desc versionDate="2007-05-02" xml:lang="zh-TW">建立的模組類型</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">
-      生成されたモジュールの種類．
-      </desc>
+      <desc versionDate="2008-04-05" xml:lang="ja">生成されたモジュールの種類．</desc>
       <desc versionDate="2007-06-12" xml:lang="fr">type de module à générer.</desc>
       <desc versionDate="2007-05-04" xml:lang="es">tipo de módulo que se genera</desc>
       <desc versionDate="2007-01-21" xml:lang="it">tipo di modulo da generare</desc>

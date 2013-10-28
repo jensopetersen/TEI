@@ -102,21 +102,17 @@
 <xsl:param name="tocNumberSuffix">.\ </xsl:param>
 <xsl:param name="numberSpacer">\ </xsl:param>
 <xsl:param name="specLinkDepth">1</xsl:param>
+<xsl:param name="exampleFont">DejaVu Sans Mono</xsl:param>
+<xsl:param name="typewriterFont">DejaVu Sans Mono</xsl:param>
+<xsl:param name="sansFont">DejaVu Sans Mono</xsl:param>
+<xsl:param name="romanFont">Linux Libertine O</xsl:param>
+
 
   <xsl:variable name="docClass">book</xsl:variable>
 <xsl:template name="latexPreambleHook">
 \usepackage{makeidx}
 \makeindex
 \defaultfontfeatures{Scale=MatchLowercase}
-%\setromanfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
-%\setmonofont[Scale=0.9]{Lucida Sans Typewriter}
-%\setsansfont[Scale=0.85]{Lucida Sans}
-\setromanfont{Linux Libertine O}
-%\setromanfont{Minion Pro}
-%\setmonofont{CourierStd}
-%\setsansfont{Myriad Pro}
 \setlength{\headheight}{14pt}
 </xsl:template>
 

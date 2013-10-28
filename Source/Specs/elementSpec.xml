@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
@@ -6,18 +6,31 @@ See the file COPYING.txt for details
 $Date$
 $Id$
 -->
-
 <?xml-model href="http://tei.oucs.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-
-<elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="elementSpec"><gloss>element specification</gloss><gloss versionDate="2007-12-20" xml:lang="ko">요소 명시</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW"/><gloss versionDate="2008-04-06" xml:lang="es">especificación del elemento</gloss><gloss versionDate="2007-06-12" xml:lang="fr">spécification d'élément</gloss><gloss versionDate="2007-11-06" xml:lang="it">specifica dell'elemento</gloss><desc>documents the structure, content, and purpose of a single element type.</desc><desc versionDate="2007-12-20" xml:lang="ko">단일 요소 유형의 구조, 내용 및 목적을 기록한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">紀錄單一元素類型的結構、內容、以及用途。</desc><desc versionDate="2008-04-05" xml:lang="ja"> 構造，内容，その要素の目的などを示す． </desc><desc versionDate="2007-06-12" xml:lang="fr">documente la structure, le contenu et l'emploi d'un
-    élément.</desc><desc versionDate="2007-05-04" xml:lang="es">documenta la estructura, contenido y finalidad de un
-    único tipo de elemento.</desc><desc versionDate="2007-01-21" xml:lang="it">documenta struttura, contenuto e scopo di un unico tipo
-    di elemento</desc><classes>
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="elementSpec">
+  <gloss>element specification</gloss>
+  <gloss versionDate="2007-12-20" xml:lang="ko">요소 명시</gloss>
+  <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
+  <gloss versionDate="2008-04-06" xml:lang="es">especificación del elemento</gloss>
+  <gloss versionDate="2007-06-12" xml:lang="fr">spécification d'élément</gloss>
+  <gloss versionDate="2007-11-06" xml:lang="it">specifica dell'elemento</gloss>
+  <desc>documents the structure, content, and purpose of a single element type.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">단일 요소 유형의 구조, 내용 및 목적을 기록한다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">紀錄單一元素類型的結構、內容、以及用途。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">構造，内容，その要素の目的などを示す．</desc>
+  <desc versionDate="2007-06-12" xml:lang="fr">documente la structure, le contenu et l'emploi d'un
+    élément.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">documenta la estructura, contenido y finalidad de un
+    único tipo de elemento.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">documenta struttura, contenuto e scopo di un unico tipo
+    di elemento</desc>
+  <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.oddDecl"/>
     <memberOf key="att.identified"/>
     <memberOf key="att.namespaceable"/>
-  </classes><content>
+  </classes>
+  <content>
     <group xmlns="http://relaxng.org/ns/structure/1.0">
       <zeroOrMore>
         <choice>
@@ -53,14 +66,12 @@ $Id$
   </content>
   <attList>
     <attDef ident="prefix" usage="opt">
-      <equiv/>
       <desc>specifies a default prefix which will be prepended to all patterns
-      relating to the element, unless otherwise stated. 
-      </desc>
+      relating to the element, unless otherwise stated.</desc>
       <datatype>
         <choice xmlns="http://relaxng.org/ns/structure/1.0">
           <value/>
-          <ref name="data.name"/>
+          <ref name="data.xmlName"/>
         </choice>
       </datatype>
       <remarks>
@@ -71,17 +82,16 @@ $Id$
         <p>Les deux-points, bien qu'ils soient permis à l'intérieur de la valeur, provoqueront la
                         génération d'un schéma invalide. </p>
       </remarks>
-      <remarks xml:lang="ja">
-        <p>
+      <remarks xml:lang="ja"><p>
         コロンは，値としては認められるが，スキーマ中では使用できない．
         </p>
       </remarks>
     </attDef>
     <!-- removed @usage -->
-  </attList><exemplum xml:lang="en">
+  </attList>
+  <exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <elementSpec module="tagdocs" ident="code">
-        <equiv/>
         <gloss/>
         <desc>contains literal code</desc>
         <classes>
@@ -92,7 +102,6 @@ $Id$
         </content>
         <attList>
           <attDef ident="type" usage="opt">
-            <equiv/>
             <desc>the language of the code</desc>
             <datatype>
               <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
@@ -101,10 +110,10 @@ $Id$
         </attList>
       </elementSpec>
     </egXML>
-  </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
+  </exemplum>
+  <exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <elementSpec module="tagdocs" xml:id="fr_Code" ident="code">
-        <equiv/>
         <gloss/>
         <desc>contient le code littéral</desc>
         <classes>
@@ -115,7 +124,6 @@ $Id$
         </content>
         <attList>
           <attDef ident="type" usage="opt">
-            <equiv/>
             <desc>la langue du code</desc>
             <datatype>
               <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
@@ -124,10 +132,10 @@ $Id$
         </attList>
       </elementSpec>
     </egXML>
-  </exemplum><exemplum xml:lang="zh-TW">
+  </exemplum>
+  <exemplum xml:lang="zh-TW">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <elementSpec module="tagdocs" ident="code">
-        <equiv/>
         <gloss/>
         <desc>包含文字規則</desc>
         <classes>
@@ -138,7 +146,6 @@ $Id$
         </content>
         <attList>
           <attDef ident="type" usage="opt">
-            <equiv/>
             <desc>規則的表達方式</desc>
             <datatype>
               <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
@@ -147,7 +154,9 @@ $Id$
         </attList>
       </elementSpec>
     </egXML>
-  </exemplum><listRef>
+  </exemplum>
+  <listRef>
     <ptr target="#TDTAG"/>
     <ptr target="#TD"/>
-  </listRef></elementSpec>
+  </listRef>
+</elementSpec>
