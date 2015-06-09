@@ -7,22 +7,26 @@
     $Id:$
 -->
 <?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-
-<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://www.ascc.net/xml/schematron" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tagdocs" ident="macroRef">
+<elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://www.ascc.net/xml/schematron" 
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" 
+  module="tagdocs" ident="dataRef">
   <desc versionDate="2010-05-14" xml:lang="en">identifies the datatype of an attribute value, either by referencing an item in an externally defined datatype library, or by
     pointing to a TEI-defined data specification</desc>
   <classes>
     <memberOf key="att.global"/>
     <memberOf key="model.oddRef"/>
-    <memberOf key="model.contentPart"/>
+    <memberOf key="model.contentPart"/><!--?-->
     <memberOf key="att.readFrom"/>
+    <memberOf key="att.repeatable"/>
   </classes>
   <content>
     <rng:empty/>
   </content>
- <attList> <attList org="choice">
+ <attList> 
+  
+   <attList org="choice">
     <attDef ident="key" >
-      <desc versionDate="2010-05-14" xml:lang="en">the identifier used for this datatype specification</desc>
+      <desc versionDate="2010-05-14" xml:lang="en">the identifier of a TEI-defined datatype specification</desc>
       <datatype>
         <rng:ref name="data.xmlName"/>
       </datatype>
@@ -37,7 +41,7 @@
     <attDef ident="ref">
       <desc versionDate="2010-05-14" xml:lang="en">a pointer to a datatype defined in some datatype library</desc>
       <datatype>
-        <rng:ref name="data.xmlName"/>
+        <rng:ref name="data.pointer"/>
       </datatype>
     </attDef>
   </attList>
@@ -50,7 +54,7 @@
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <schemaSpec ident="myTEI" source="http://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
         <!-- ... -->
-        <dataRef key="data.text" source="tei:1.5.0"/>
+        <dataRef key="teidata.text" source="tei:1.5.0"/>
         <!-- ... -->
       </schemaSpec>
     </egXML>
@@ -65,9 +69,9 @@
     </egXML></exemplum>
     <exemplum xml:lang="und">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <dataSpec ident="data.percentage">
+        <dataSpec ident="teidata.percentage">
           <desc>datatype used for attributes taking an integer value between 0 and 99</desc>     
-        <dataRef name="nonNegativeInteger" match="[0-9][0-9]?"/>
+        <dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
         </dataSpec>
       </egXML>
     </exemplum>
