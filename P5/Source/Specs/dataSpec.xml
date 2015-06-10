@@ -63,7 +63,7 @@ $Id:  $
       </dataSpec>
     </egXML>
   </exemplum>
-  
+
   <exemplum xml:lang="und">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <dataSpec ident="teidata.counter">
