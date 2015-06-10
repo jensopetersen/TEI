@@ -966,8 +966,8 @@ to mark any technical term, thus:
               ><attDef ident="target">
               <desc versionDate="2010-05-02" xml:lang="en">specifies the destination of the
                 reference by supplying one or more URI References</desc>
-              <datatype maxOccurs="unbounded">
-                <rng:ref minOccurs="1" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <rng:ref  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   name="data.pointer"/>
               </datatype>
             </attDef></egXML> or, equivalently : <egXML xmlns="http://www.tei-c.org/ns/Examples"
@@ -1032,17 +1032,14 @@ than 100</q>. -->
             </valItem>
           </egXML>
         </p>
-        <p>Where all the possible values for an attribute can be enumerated, the datatype
+        <p>Where the possible values for an attribute can be enumerated, the datatype
             <ident>data.enumerated</ident> should be used, together with a <gi>valList</gi> element
           to specify the values and their significance, as in the following example: <egXML
             xmlns="http://www.tei-c.org/ns/Examples"><valList type="closed">
               <valItem ident="req"><gloss>required</gloss></valItem>
-              <!-- MDH 2014-06-22: commenting mwa and rwa out per http://sourceforge.net/p/tei/bugs/299/ and 
-                  http://sourceforge.net/p/tei/bugs/676/ . If no problems apparent in future, remove. -->
-              <!--<valItem ident="mwa"><gloss>mandatory when applicable</gloss></valItem>-->
+             
               <valItem ident="rec"><gloss>recommended</gloss></valItem>
-              <!--<valItem ident="rwa"><gloss>recommended when applicable</gloss></valItem>-->
-              <valItem ident="opt"><gloss>optional</gloss></valItem>
+                 <valItem ident="opt"><gloss>optional</gloss></valItem>
             </valList>
           </egXML> Note the use of the <gi>gloss</gi> element here to explain the otherwise less
           than obvious meaning of the codes used for these values. Since this value list specifies

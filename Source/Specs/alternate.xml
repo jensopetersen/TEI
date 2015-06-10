@@ -26,11 +26,11 @@ $Id$
   <constraintSpec ident="dataSpecCase" scheme="isoschematron" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <constraint><sch:report test="
     parent::tei:dataSpec
-    and 
-    child::*[not(self::tei:dataRef)]"
-    >An alternate element inside a dataSpec may contain only dataRef children</sch:report>
+    and child::*[not((self::tei:dataRef) or (self::tei:valList)) ]"
+    >An alternate element inside a dataSpec may contain only dataRef or valList children </sch:report>
   </constraint>
-</constraintSpec>  <!--<report test=“parent::tei:dataSpec and *[not(self::tei:dataRef)]”>
+</constraintSpec>  
+  <!--<report test=“parent::tei:dataSpec and *[not(self::tei:dataRef)]”>
     -->
   <exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en"><content>

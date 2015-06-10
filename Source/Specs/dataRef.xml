@@ -75,7 +75,14 @@
         </dataSpec>
       </egXML>
     </exemplum>
-    
+  <exemplum xml:lang="und">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <attDef ident="target">
+        <desc>supplies two or more pointer values</desc>     
+        <dataRef minOccurs="2" maxOccurs="unbounded" name="anyURI" />
+      </attDef>
+    </egXML>
+  </exemplum>
   <remarks versionDate="2010-05-14" xml:lang="en">
     <p>Only one of the attributes <att>key</att>, <att>name</att>, and <att>ref</att> may be used. 
     </p>
