@@ -16,7 +16,7 @@
   </teiHeader>
   <text>
     <body>
-      <schemaSpec start="div" prefix="tei_" ident="testbasic" xml:lang="en" >
+      <schemaSpec start="div one" prefix="tei_" ident="testbasic" xml:lang="en" >
         <moduleRef key="tei"/>
         <elementRef key="p"/>
         <elementRef key="div"/>
@@ -50,10 +50,11 @@
 	
 	<dataSpec ident="teidata.probCert" mode="add">
           <desc versionDate="2015-05-20" xml:lang="en">defines a datatype which may indicate either probability or certainty.</desc>
-          <alternate>
+	    <alternate>
             <dataRef key="teidata.probability"/>
             <dataRef key="teidata.certainty"/>
-          </alternate>
+            </alternate>
+
 	</dataSpec>
 	
 	<dataSpec ident="teidata.counter" mode="add">
@@ -64,21 +65,27 @@
 	  </alternate>
 	</dataSpec>
 
-	<elementSpec ident="one">
+	<elementSpec ident="one" mode="add">
           <desc>an empty element with an attribute</desc>
           <content/>
           <attList>
-            <attDef ident="count">
+            <attDef ident="count" mode="add">
               <desc>how often the one element is used</desc>
-              <dataRef name="nonNegativeInteger"/>
+	      <datatype>
+		<dataRef name="nonNegativeInteger"/>
+	      </datatype>
             </attDef>
-            <attDef ident="teicount">
+            <attDef ident="teicount" mode="add">
               <desc>another way of saying same thing</desc>
-              <dataRef key="teidata.count"/>
+	      <datatype>
+		<dataRef key="teidata.count"/>
+	      </datatype>
             </attDef>
             <attDef ident="trixie">
               <desc>an integral percentage</desc>
-              <dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
+	      <datatype>
+		<dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
+	      </datatype>
             </attDef>
           </attList>
        </elementSpec>
