@@ -1244,18 +1244,19 @@ entities in the XML DTD fragments.--></p>
         quantities, probabilities, or temporal expressions, those which define various kinds of
         shorthand codes or keys, and those which define pointers or links.</p>
       <!-- following commented out section to be reinstated when all teidata.foo elements are available -->
-      
-      <!--<p>The following datatypes are used for attributes which are intended to hold normalized
+ 
+      <p>The following datatypes are used for attributes which are intended to hold normalized
         values of various kinds. First, expressions of quantity or probability: <specList>
-          <specDesc key="data.certainty"/>
+          <!--<specDesc key="data.certainty"/>
           <specDesc key="data.probability"/>
           <specDesc key="data.numeric"/>
           <specDesc key="data.interval"/>
-          <specDesc key="data.percentage"/>
+          <specDesc key="data.percentage"/>-->
           <specDesc key="data.count"/>
         </specList>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.count.xml"/>
       </p>
-      <p>Examples of attributes using the <ident type="datatype">data.probability</ident> datatype
+     <!-- <p>Examples of attributes using the <ident type="datatype">data.probability</ident> datatype
         include <att>degree</att> on <gi>damage</gi> or <gi>certainty</gi>; examples of <ident
           type="datatype">data.numeric</ident> include <att>quantity</att> on members of the <ident
           type="class">att.measurement</ident> class or <att>value</att> on <gi>numeric</gi>;
