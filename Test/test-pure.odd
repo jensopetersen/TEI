@@ -3,7 +3,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Basic tests</title>
+        <title>purity tests</title>
         <author>TEI Council</author>
       </titleStmt>
       <publicationStmt>
@@ -16,7 +16,7 @@
   </teiHeader>
   <text>
     <body>
-      <schemaSpec start="div one" prefix="tei_" ident="testbasic" xml:lang="en" >
+      <schemaSpec start="div one" prefix="tei_" ident="test-pure" xml:lang="en" >
         <moduleRef key="tei"/>
         <elementRef key="p"/>
         <elementRef key="div"/>
@@ -57,7 +57,7 @@
 
 	</dataSpec>
 	
-	<dataSpec ident="teidata.counter" mode="add">
+	<dataSpec ident="teidata.count" mode="add">
 	  <desc>defines a datatype suitable for counters which must have either a positive integer value or the string "unbounded"</desc>
 	  <alternate>
             <dataRef name="nonNegativeInteger"/>
@@ -76,7 +76,7 @@
 	      
             </attDef>
             <attDef ident="teicount" mode="add">
-              <desc>another way of saying same thing</desc>
+              <desc>another way of saying almost the same thing</desc>
 	      
 		<dataRef key="teidata.count"/>
 	      
