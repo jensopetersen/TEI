@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://www.tei-c.org/ns/1.0"><!--
+Schema generated from ODD source 2015-06-25T18:24:03Z. .
+TEI Edition: Version 2.8.1a. Last updated on
+	11th May 2015, revision 13212
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.1a./
+  
+--><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="data.certainty">
+      <choice>
+         <value>high</value>
+         <value>medium</value>
+         <value>low</value>
+         <value>unknown</value>
+      </choice>
+   </define>
+   <define name="data.probability">
+      <data type="double">
+         <param name="minInclusive">0</param>
+         <param name="maxInclusive">1</param>
+      </data>
+   </define>
+   <define name="data.numeric">
+      <choice>
+         <data type="double"/>
+         <data type="token">
+            <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+         </data>
+         <data type="decimal"/>
+      </choice>
+   </define>
+   <define name="data.interval">
+      <choice>
+         <data type="float">
+            <param name="minExclusive">0</param>
+         </data>
+         <value>regular</value>
+         <value>irregular</value>
+         <value>unknown</value>
+      </choice>
+   </define>
+   <define name="data.percentage">
+      <data type="nonNegativeInteger">
+         <param name="maxInclusive">100</param>
+      </data>
+   </define>
+   <define name="data.count">
+      <data type="nonNegativeInteger"/>
+   </define>
+   <define name="data.temporal.w3c">
+      <choice>
+         <data type="date"/>
+         <data type="gYear"/>
+         <data type="gMonth"/>
+         <data type="gDay"/>
+         <data type="gYearMonth"/>
+         <data type="gMonthDay"/>
+         <data type="time"/>
+         <data type="dateTime"/>
+      </choice>
+   </define>
+   <define name="data.duration.w3c">
+      <data type="duration"/>
+   </define>
+   <define name="data.truthValue">
+      <data type="boolean"/>
+   </define>
+   <define name="data.xTruthValue">
+      <choice>
+         <data type="boolean"/>
+         <value>unknown</value>
+         <value>inapplicable</value>
+      </choice>
+   </define>
+   <define name="data.language">
+      <choice>
+         <data type="language"/>
+         <value/>
+      </choice>
+   </define>
+   <define name="data.namespace">
+      <data type="anyURI"/>
+   </define>
+   <define name="data.outputMeasurement">
+      <data type="token">
+         <param name="pattern">[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)</param>
+      </data>
+   </define>
+   <define name="data.pattern">
+      <data type="token"/>
+   </define>
+   <define name="data.point">
+      <data type="token">
+         <param name="pattern">(\-?[0-9]+\.?[0-9]*,\-?[0-9]+\.?[0-9]*)</param>
+      </data>
+   </define>
+   <define name="data.pointer">
+      <data type="anyURI"/>
+   </define>
+   <define name="data.version">
+      <data type="token">
+         <param name="pattern">[\d]+(\.[\d]+){0,2}</param>
+      </data>
+   </define>
+   <define name="data.versionNumber">
+      <data type="token">
+         <param name="pattern">[\d]+[a-z]*[\d]*(\.[\d]+[a-z]*[\d]*){0,3}</param>
+      </data>
+   </define>
+   <define name="data.replacement">
+      <text/>
+   </define>
+   <define name="data.xpath">
+      <text/>
+   </define>
+   <define name="data.word">
+      <data type="token">
+         <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+      </data>
+   </define>
+   <define name="data.sex">
+      <ref name="data.word"/>
+   </define>
+   <define name="data.text">
+      <data type="string"/>
+   </define>
+   <define name="data.name">
+      <data type="Name"/>
+   </define>
+   <define name="data.xmlName">
+      <data type="NCName"/>
+   </define>
+   <define name="data.enumerated">
+      <ref name="data.word"/>
+   </define>
+   <define name="model.nameLike.agent">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_sequence">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_sequence">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.placeStateLike">
+      <choice>
+         <ref name="model.placeNamePart"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_alternation">
+      <choice>
+         <ref name="model.placeNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_sequence">
+      <ref name="model.placeNamePart_sequence"/>
+   </define>
+   <define name="model.placeStateLike_sequenceOptional">
+      <optional>
+         <ref name="model.placeNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.placeStateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.placeStateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.placeNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="model.quoteLike">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike">
+      <choice>
+         <ref name="model.nameLike.agent"/>
+         <ref name="model.offsetLike"/>
+         <ref name="model.placeStateLike"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_alternation">
+      <choice>
+         <ref name="model.nameLike.agent_alternation"/>
+         <ref name="model.offsetLike_alternation"/>
+         <ref name="model.placeStateLike_alternation"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_sequence">
+      <ref name="model.nameLike.agent_sequence"/>
+      <ref name="model.offsetLike_sequence"/>
+      <ref name="model.placeStateLike_sequence"/>
+   </define>
+   <define name="model.nameLike_sequenceOptional">
+      <optional>
+         <ref name="model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.offsetLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.placeStateLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.nameLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.nameLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.offsetLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.placeStateLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="element">
+      <element name="element">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An implausible large element for datatype testing</a:documentation>
+         <empty/>
+         <optional>
+            <attribute name="A_certainty">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.certainty"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_probability">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.probability"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_numeric">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.numeric"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_interval">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.interval"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_percentage">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.percentage"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_count">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.count"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_temporal.w3c">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.temporal.w3c"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_duration.w3c">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.duration.w3c"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_truthValue">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.truthValue"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_xTruthValue">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.xTruthValue"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_language">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.language"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_namespace">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.namespace"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_outputMeasurement">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.outputMeasurement"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_pattern">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.pattern"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_point">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.point"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_pointer">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.pointer"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.version"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_versionNumber">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.versionNumber"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_replacement">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.replacement"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_xpath">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.xpath"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_word">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.word"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_sex">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.sex"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_text">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_name">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.name"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_xmlName">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.xmlName"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="A_enumerated">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <ref name="data.enumerated"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <start>
+      <choice>
+         <ref name="element"/>
+      </choice>
+   </start>
+</grammar>

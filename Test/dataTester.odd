@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <schemaSpec ident="dataTester" start="element">
+            <moduleRef key="tei"/>
+            <elementSpec ident="element">
+               <desc>An implausible large element for datatype testing</desc>
+               <attList>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_certainty">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.certainty"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_probability">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.probability"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_numeric">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.numeric"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_interval">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.interval"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_percentage">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.percentage"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_count">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.count"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_temporal.w3c">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.temporal.w3c"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_duration.w3c">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.duration.w3c"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_truthValue">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.truthValue"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_xTruthValue">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.xTruthValue"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_language">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.language"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_namespace">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.namespace"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_outputMeasurement">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.outputMeasurement"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_pattern">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pattern"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_point">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.point"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_pointer">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pointer"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_version">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.version"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_versionNumber">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.versionNumber"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_replacement">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.replacement"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_xpath">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.xpath"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_word">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.word"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_sex">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.sex"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_text">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.text"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_name">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.name"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_xmlName">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.xmlName"/>
+                     </datatype>
+                  </attDef>
+                  <attDef xmlns:tei="http://www.tei-c.org/ns/1.0" ident="A_enumerated">
+                     <datatype>
+                        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+                     </datatype>
+                  </attDef>
+               </attList>
+            </elementSpec>
+      </schemaSpec>
+      </body>
+  </text>
+</TEI>
