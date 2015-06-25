@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/home/lou/Public/P5-Pure/Test/out/dataTester.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<element xmlns="http://www.tei-c.org/ns/1.0" A_certainty="high" A_duration.w3c="P7D"
+    A_xpath="anydamthing" A_enumerated="bong" A_count="1" A_interval="irregular" A_language="en"
+    A_name="FRED" A_namespace="HAHAHAHA" A_numeric="0.245" A_outputMeasurement="42cm"
+    A_pattern="anydamnthing" A_percentage="99" A_point="12,34" A_pointer="#wibble"
+    A_probability="0.2" A_replacement="anydamnthing" A_sex="1" A_temporal.w3c="--07-15"
+    A_text="anydamnthing" A_truthValue="false" A_version="55555" A_versionNumber="11111"
+    A_word="word" A_xTruthValue="inapplicable" A_xmlName="wibble"/>
