@@ -1,0 +1,16 @@
+<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+          xmlns:tei="http://www.tei-c.org/ns/1.0"
+          module="tei"
+          ident="teidata.replacement">
+  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         versionDate="2013-04-14"
+         xml:lang="en">defines attribute values which contain a replacement template.</desc>
+  <content>
+      <textNode/>
+   </content>
+  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            versionDate="2013-04-14"
+            xml:lang="en">
+      <p/>
+  </remarks>
+</dataSpec>

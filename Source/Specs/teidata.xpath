@@ -1,0 +1,18 @@
+<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+          xmlns:tei="http://www.tei-c.org/ns/1.0"
+          module="tei"
+          ident="teidata.xpath">
+  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         versionDate="2013-04-14"
+         xml:lang="en">defines attribute values which contain an XPath  expression.</desc>
+  <content>
+      <textNode/>
+   </content>
+  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
+            versionDate="2013-04-14"
+            xml:lang="en">
+      <p>Any XPath expression using the syntax
+defined in <ptr target="#XSLT2"/>
+      </p>
+  </remarks>
+</dataSpec>
