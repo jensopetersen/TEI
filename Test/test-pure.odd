@@ -32,6 +32,9 @@
             <attDef ident="att3" mode="add">
               <dataRef key="teidata.count" maxOccurs="2"/>
             </attDef>
+            <attDef ident="att4" mode="add">
+             <datatype minOccurs="2" maxOccurs="5"> <dataRef key="teidata.count"/></datatype>
+            </attDef>
           </attList>
         </elementSpec>
         <dataSpec ident="teidata.pointer" mode="add">

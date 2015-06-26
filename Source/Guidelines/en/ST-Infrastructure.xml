@@ -1243,46 +1243,45 @@ entities in the XML DTD fragments.--></p>
       <p>TEI-defined datatypes may be grouped into those which define normalized values for numeric
         quantities, probabilities, or temporal expressions, those which define various kinds of
         shorthand codes or keys, and those which define pointers or links.</p>
-      <!-- following commented out section to be reinstated when all teidata.foo elements are available -->
  
       <p>The following datatypes are used for attributes which are intended to hold normalized
         values of various kinds. First, expressions of quantity or probability: <specList>
-          <!--<specDesc key="data.certainty"/>
-          <specDesc key="data.probability"/>
-          <specDesc key="data.numeric"/>
-          <specDesc key="data.interval"/>
-          <specDesc key="data.percentage"/>-->
-          <specDesc key="data.count"/>
+          <specDesc key="teidata.certainty"/>
+          <specDesc key="teidata.probability"/>
+          <specDesc key="teidata.numeric"/>
+          <specDesc key="teidata.interval"/>
+          <specDesc key="teidata.percentage"/>-->
+          <specDesc key="teidata.count"/>
         </specList>
+     
+      </p>
+     <p>Examples of attributes using the <ident type="datatype">teidata.probability</ident> datatype
+        include <att>degree</att> on <gi>damage</gi> or <gi>certainty</gi>; examples of <ident
+          type="datatype">teidata.numeric</ident> include <att>quantity</att> on members of the <ident
+          type="class">att.measurement</ident> class or <att>value</att> on <gi>numeric</gi>;
+        examples of <ident type="datatype">teidata.count</ident> include <att>cols</att> on
+          <gi>cell</gi> and <gi>table</gi>.</p>
+      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-1"
+        n="Numeric Datatypes">
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.certainty.xml"/>
+
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.probability.xml"/>
+
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.numeric.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.interval.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.percentage.xml"/>
+
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.count.xml"/>
-      </p>
-     <!-- <p>Examples of attributes using the <ident type="datatype">data.probability</ident> datatype
-        include <att>degree</att> on <gi>damage</gi> or <gi>certainty</gi>; examples of <ident
-          type="datatype">data.numeric</ident> include <att>quantity</att> on members of the <ident
-          type="class">att.measurement</ident> class or <att>value</att> on <gi>numeric</gi>;
-        examples of <ident type="datatype">data.count</ident> include <att>cols</att> on
-          <gi>cell</gi> and <gi>table</gi>.</p>
-      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-1"
-        n="Numeric Datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.probability.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.numeric.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.interval.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.percentage.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.count.xml"/>
       </specGrp>
       <p>Next, the datatypes used for attributes which are intended to hold normalized dates or
         times, durations, or truth values: <specList>
-          <specDesc key="data.duration.w3c"/>
-          <specDesc key="data.duration.iso"/>
-          <specDesc key="data.temporal.w3c"/>
-          <specDesc key="data.temporal.iso"/>
-          <specDesc key="data.truthValue"/>
-          <specDesc key="data.xTruthValue"/>
-          <specDesc key="data.language"/>
+          <specDesc key="teidata.duration.w3c"/>
+          <specDesc key="teidata.duration.iso"/>
+          <specDesc key="teidata.temporal.w3c"/>
+          <specDesc key="teidata.temporal.iso"/>
+          <specDesc key="teidata.truthValue"/>
+          <specDesc key="teidata.xTruthValue"/>
+          <specDesc key="teidata.language"/>
         </specList>
       </p>
       <p>Note that in each of these cases the values used are those recommended by existing
@@ -1292,56 +1291,56 @@ entities in the XML DTD fragments.--></p>
         case of sex.</p>
       <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-2"
         n="Normalized Datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.temporal.w3c.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.temporal.w3c.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.duration.w3c.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.duration.w3c.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.truthValue.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.truthValue.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xTruthValue.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.xTruthValue.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.language.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.language.xml"/>
       </specGrp>
       <p>The following datatypes have more specialized uses: <specList>
-          <specDesc key="data.namespace"/>
-          <specDesc key="data.outputMeasurement"/>
-          <specDesc key="data.pattern"/>
-          <specDesc key="data.point"/>
-          <specDesc key="data.pointer"/>
-          <specDesc key="data.version"/>
-          <specDesc key="data.versionNumber"/>
-          <specDesc key="data.replacement"/>
-          <specDesc key="data.xpath"/>
+          <specDesc key="teidata.namespace"/>
+          <specDesc key="teidata.outputMeasurement"/>
+          <specDesc key="teidata.pattern"/>
+          <specDesc key="teidata.point"/>
+          <specDesc key="teidata.pointer"/>
+          <specDesc key="teidata.version"/>
+          <specDesc key="teidata.versionNumber"/>
+          <specDesc key="teidata.replacement"/>
+          <specDesc key="teidata.xpath"/>
         </specList>
       </p>
       <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-3"
         n="Notation and pointer datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.namespace.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.namespace.xml"/>
 
         <include xmlns="http://www.w3.org/2001/XInclude"
-          href="../../Specs/data.outputMeasurement.xml"/>
+          href="../../Specs/teidata.outputMeasurement.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pattern.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.pattern.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.point.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pointer.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.version.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.versionNumber.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.replacement.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xpath.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.point.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.pointer.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.version.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.versionNumber.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.replacement.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.xpath.xml"/>
       </specGrp>
       <p>By far the largest number of TEI attributes take values which are coded values or names of
         some kind. These values may be constrained or defined in a number of different ways, each of
         which is given a different name, as follows: <specList>
-          <specDesc key="data.word"/>
-          <specDesc key="data.text"/>
-          <specDesc key="data.name"/>
-          <specDesc key="data.enumerated"/>
-          <specDesc key="data.sex"/>
-          <specDesc key="data.xmlName"/> </specList>
+          <specDesc key="teidata.word"/>
+          <specDesc key="teidata.text"/>
+          <specDesc key="teidata.name"/>
+          <specDesc key="teidata.enumerated"/>
+          <specDesc key="teidata.sex"/>
+          <specDesc key="teidata.xmlName"/> </specList>
       </p>
 
-      <p>Attributes of type <ident type="datatype">data.word</ident>, such as <att>age</att> on
+      <p>Attributes of type <ident type="datatype">teidata.word</ident>, such as <att>age</att> on
           <gi>person</gi>, are used to supply an identifier expressed as any kind of single token or
         word. The TEI places a few constraints on the characters which may be used for this purpose:
         only Unicode characters classified as letters, digits, punctuation characters, or symbols
@@ -1354,7 +1353,7 @@ entities in the XML DTD fragments.--></p>
         the inability to include whitespace or other special characters in a value may be
         problematic. In other cases, it may also be simply more convenient to supply a short
         sequence of natural language words including spaces as a single value. For these reasons, we
-        also provide a datatype <ident>data.text</ident> which does permit whitespace and indeed any
+        also provide a datatype <ident>teidata.text</ident> which does permit whitespace and indeed any
         other Unicode character. Legal values include <val>cholmondeley</val>, <val>été</val>,
           <val>1234</val>, <val>e-content</val>, <val>xml:id</val>, and <val>grand wazoo</val>. This
         datatype should be used with care since XML will not normalize whitespace characters within
@@ -1362,228 +1361,34 @@ entities in the XML DTD fragments.--></p>
         spaces) would be considered distinct. This case should be distinguished from that of an
         attribute permitting multiple values, each of which may be separated by whitespace which
           <emph>will</emph> be normalized (see further <ptr target="#TD-datatypes"/>). </p>
-      <p>Attributes of type <ident type="datatype">data.name</ident> are similar to those of type
-          <ident type="datatype">data.word</ident>, but with the additional constraint that they
+      <p>Attributes of type <ident type="datatype">teidata.name</ident> are similar to those of type
+          <ident type="datatype">teidata.word</ident>, but with the additional constraint that they
         must be legal XML identifiers, as defined by the XML 1.0 specification, or successors.
         Hence, they may not begin with digits or punctuation characters. Legal identifiers include
           <val>cholmondeley</val>, <val>été</val>, <val>e_content</val>, or <val>xml:id</val>, but
         not <val>grand wazoo</val> or <val>1234</val>. Attributes of this kind are typically used to
         represent XML element or attribute names.</p>
-      <p>Attributes of type <ident type="datatype">data.enumerated</ident>, such as <att>new</att>
+      <p>Attributes of type <ident type="datatype">teidata.enumerated</ident>, such as <att>new</att>
         on <gi>shift</gi> or <att>evidence</att> supplied by <ident type="class"
           >att.editLike</ident>, have the same definition as <ident type="datatype"
-          >data.word</ident> above, with the added constraint that the word supplied is taken from a
+          >teidata.word</ident> above, with the added constraint that the word supplied is taken from a
         specific list of possibilities. In each case, the element or class specification which
         includes the definition for the attribute will also contain a list of possible values,
         together with a prose description of their intended significance. This list may be open (in
         which case the list is advisory), or closed (in which case it determines the range of legal
         values). In this latter case, the datatype will not be <ident type="datatype"
-          >data.enumerated</ident>, but an explicit list of the possible values.</p>
+          >teidata.enumerated</ident>, but an explicit list of the possible values.</p>
 
       <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-4"
         n="Coded value datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.word.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.sex.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.text.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.word.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.sex.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.text.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.name.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xmlName.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.name.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.xmlName.xml"/>
 
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.enumerated.xml"/>
-      </specGrp>
-      <p>An attribute may, of course, take more than one value of a given type, for example a list
-        of pointer values, or a list of words. In the TEI scheme, this information is regarded as a
-        property of the <gi>datatype</gi> element used to document the attribute in question rather
-        than as a distinct <soCalled>datatype</soCalled>. See further <ptr target="#TD-datatypes"
-        />.</p>-->
-    </div>
-    <div type="div3" xml:id="DTYPES">
-      <head>Datatype Macros</head>
-      <p>The values which attributes may take in a TEI schema are defined, for the most part, by
-        reference to a TEI <term>datatype</term>. Each such datatype is defined in terms of other
-        primitive datatypes, derived mostly from <ref target="#XSD2">W3C Schema Datatypes</ref>,
-        literal values, or other datatypes. This indirection makes it possible for a TEI application
-        to set constraints either globally or in individual cases, by redefining the datatype
-        definition or the reference to it respectively. In some cases, the TEI datatype includes
-        additional usage constraints which cannot be enforced by existing schema languages, although
-        a TEI-compliant processor should attempt to validate them (see further discussion in chapter
-          <ptr target="#CF"/>).</p>
-      <p>Where literal values or name tokens are used in a datatype definition, an associated value
-        list supplies definitions for the significance of suggested or (in the case of closed lists)
-        all possible values.</p>
-      <!-- but can we put a valList in a macroSpec ? -->
-      <p>TEI-defined datatypes may be grouped into those which define normalized values for numeric
-        quantities, probabilities, or temporal expressions, those which define various kinds of
-        shorthand codes or keys, and those which define pointers or links.</p>
-      <p>The following datatypes are used for attributes which are intended to hold normalized
-        values of various kinds. First, expressions of quantity or probability: <specList>
-          <specDesc key="data.certainty"/>
-          <specDesc key="data.probability"/>
-          <specDesc key="data.numeric"/>
-          <specDesc key="data.interval"/>
-          <specDesc key="data.percentage"/>
-          <specDesc key="data.count"/>
-        </specList>
-      </p>
-      <p>Examples of attributes using the <ident type="datatype">data.probability</ident> datatype
-        include <att>degree</att> on <gi>damage</gi> or <gi>certainty</gi>; examples of <ident
-          type="datatype">data.numeric</ident> include <att>quantity</att> on members of the <ident
-          type="class">att.measurement</ident> class or <att>value</att> on <gi>numeric</gi>;
-        examples of <ident type="datatype">data.count</ident> include <att>cols</att> on
-          <gi>cell</gi> and <gi>table</gi>.</p>
-      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-1"
-        n="Numeric Datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.probability.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.numeric.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.interval.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.percentage.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.count.xml"/>
-      </specGrp>
-      <p>Next, the datatypes used for attributes which are intended to hold normalized dates or
-        times, durations, or truth values: <specList>
-          <specDesc key="data.duration.w3c"/>
-          <specDesc key="data.duration.iso"/>
-          <specDesc key="data.temporal.w3c"/>
-          <specDesc key="data.temporal.iso"/>
-          <specDesc key="data.truthValue"/>
-          <specDesc key="data.xTruthValue"/>
-          <specDesc key="data.language"/>
-        </specList>
-      </p>
-      <p>Note that in each of these cases the values used are those recommended by existing
-        international standards: ISO 8601 as profiled by <title ref="#XSD2">XML Schema Part 2:
-          Datatypes Second Edition</title> in the case of durations, times, and date; W3C Schema
-        datatypes in the case of truth values; BCP 47 in the case of language; and ISO 5218 in the
-        case of sex.</p>
-      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-2"
-        n="Normalized Datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.temporal.w3c.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.duration.w3c.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.truthValue.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xTruthValue.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.language.xml"/>
-      </specGrp>
-      <p>The following datatypes have more specialized uses: <specList>
-          <specDesc key="data.namespace"/>
-          <specDesc key="data.outputMeasurement"/>
-          <specDesc key="data.pattern"/>
-          <specDesc key="data.point"/>
-          <specDesc key="data.pointer"/>
-          <specDesc key="data.version"/>
-          <specDesc key="data.versionNumber"/>
-          <specDesc key="data.replacement"/>
-          <specDesc key="data.xpath"/>
-        </specList>
-      </p>
-      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-3"
-        n="Notation and pointer datatypes">
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.namespace.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude"
-          href="../../Specs/data.outputMeasurement.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pattern.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.point.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pointer.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.version.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.versionNumber.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.replacement.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xpath.xml"/>
-      </specGrp>
-      <p>By far the largest number of TEI attributes take values which are coded values or names of
-        some kind. These values may be constrained or defined in a number of different ways, each of
-        which is given a different name, as follows: <specList>
-          <!--specDesc key="data.key"/-->
-          <specDesc key="data.word"/>
-          <specDesc key="data.text"/>
-          <specDesc key="data.name"/>
-          <specDesc key="data.enumerated"/>
-          <specDesc key="data.sex"/>
-          <specDesc key="data.xmlName"/>
-          <!-- MDH 2013-02-06: Removed as data.code is no longer in use.     -->
-          <!--<specDesc key="data.code"/>-->
-        </specList>
-      </p>
-      <!-- <p>The attributes <att>key</att> provided by the <ident type="class">att.canonical</ident> class is currently the only attribute
-of type <ident type="datatype">data.key</ident>. It is used to supply
-an externally-defined identifier, such as a database key or
-filename. Because such identifiers are externally-defined, no
-constraints are placed on their possible values: any string of Unicode
-characters may be used. Any constraints on their values, such as the
-rules for constructing a valid database key in a particular system,
-may be documented by a <gi>tagUsage</gi> element in the TEI header,
-but are not enforced by the datatype as defined here. Such
-system-specific constraints may however be added to a TEI schema by
-using the customization techniques methods described in <ptr
-target="#MD"/>.</p>-->
-      <!-- removed as we don't now use data.key LB 2012-06-17-->
-      <p>Attributes of type <ident type="datatype">data.word</ident>, such as <att>age</att> on
-          <gi>person</gi>, are used to supply an identifier expressed as any kind of single token or
-        word. The TEI places a few constraints on the characters which may be used for this purpose:
-        only Unicode characters classified as letters, digits, punctuation characters, or symbols
-        can appear in an attribute value of this kind. Note in particular that such values cannot
-        include whitespace characters. Legal values include <val>cholmondeley</val>, <val>été</val>,
-          <val>1234</val>, <val>e_content</val>, or <val>xml:id</val>, but not <val>grand
-          wazoo</val>. Attributes of this kind are sometimes used to associate (by co-reference)
-        elements of different types.</p>
-      <p>Where identifiers are defined externally, for example as part of a database or file system,
-        the inability to include whitespace or other special characters in a value may be
-        problematic. In other cases, it may also be simply more convenient to supply a short
-        sequence of natural language words including spaces as a single value. For these reasons, we
-        also provide a datatype <ident>data.text</ident> which does permit whitespace and indeed any
-        other Unicode character. Legal values include <val>cholmondeley</val>, <val>été</val>,
-          <val>1234</val>, <val>e-content</val>, <val>xml:id</val>, and <val>grand wazoo</val>. This
-        datatype should be used with care since XML will not normalize whitespace characters within
-        it: for example the values <code>n="a b"</code> (two spaces) and <code>n="a b"</code> (three
-        spaces) would be considered distinct. This case should be distinguished from that of an
-        attribute permitting multiple values, each of which may be separated by whitespace which
-          <emph>will</emph> be normalized (see further <ptr target="#TD-datatypes"/>). </p>
-      <p>Attributes of type <ident type="datatype">data.name</ident> are similar to those of type
-          <ident type="datatype">data.word</ident>, but with the additional constraint that they
-        must be legal XML identifiers, as defined by the XML 1.0 specification, or successors.
-        Hence, they may not begin with digits or punctuation characters. Legal identifiers include
-          <val>cholmondeley</val>, <val>été</val>, <val>e_content</val>, or <val>xml:id</val>, but
-        not <val>grand wazoo</val> or <val>1234</val>. Attributes of this kind are typically used to
-        represent XML element or attribute names.</p>
-      <p>Attributes of type <ident type="datatype">data.enumerated</ident>, such as <att>new</att>
-        on <gi>shift</gi> or <att>evidence</att> supplied by <ident type="class"
-          >att.editLike</ident>, have the same definition as <ident type="datatype"
-          >data.word</ident> above, with the added constraint that the word supplied is taken from a
-        specific list of possibilities. In each case, the element or class specification which
-        includes the definition for the attribute will also contain a list of possible values,
-        together with a prose description of their intended significance. This list may be open (in
-        which case the list is advisory), or closed (in which case it determines the range of legal
-        values). In this latter case, the datatype will not be <ident type="datatype"
-          >data.enumerated</ident>, but an explicit list of the possible values.</p>
-      <!-- MDH 2013-02-06: Removed as data.code is no longer in use.     -->
-      <p><!--Attributes of type <ident type="datatype">data.code</ident> are similar in function, in
-        that they also supply encoded names for values which are defined in more detail elsewhere.
-        In this case, however, the full definition is supplied as content of another XML element,
-        typically but not necessarily in the same document, and it is referenced by means of a
-        pointer.--></p>
-      <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-4"
-        n="Coded value datatypes">
-        <!--<include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.key.xml"/>-->
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.word.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.sex.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.text.xml"/>
-        <!-- MDH 2013-02-06: Removed as data.code is no longer in use.     -->
-        <!-- <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.code.xml"/>-->
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.name.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xmlName.xml"/>
-
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.enumerated.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.enumerated.xml"/>
       </specGrp>
       <p>An attribute may, of course, take more than one value of a given type, for example a list
         of pointer values, or a list of words. In the TEI scheme, this information is regarded as a
