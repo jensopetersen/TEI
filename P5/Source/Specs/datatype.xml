@@ -24,6 +24,7 @@ $Id$
   <content>
     <choice xmlns="http://relaxng.org/ns/structure/1.0">
       <ref name="macroRef"/>
+      <ref name="dataRef"/>
     <oneOrMore>
       <group>
         <ref name="macro.schemaPattern"/>
