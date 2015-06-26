@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,80 +17,65 @@
   </teiHeader>
   <text>
     <body>
-      <schemaSpec start="div one" prefix="tei_" ident="test-pure" xml:lang="en" >
+      <schemaSpec start="div one" prefix="tei_" ident="test-pure" xml:lang="en">
         <moduleRef key="tei"/>
         <elementRef key="p"/>
         <elementRef key="div"/>
-
         <elementSpec ident="div" module="textstructure" mode="change">
           <attList>
             <attDef ident="att1" mode="add">
-	      
-		<dataRef key="teidata.pointer"/>
-	      
+             <datatype minOccurs="1" maxOccurs="unbounded"> <dataRef key="teidata.pointer"/></datatype>
             </attDef>
-            <attDef ident="att2" mode="add">
-	      
-		<dataRef name="float"/>
-	      
+            <attDef ident="att2" mode="add" >
+              <dataRef name="float" />
             </attDef>
             <attDef ident="att3" mode="add">
-	      
-		<dataRef key="teidata.counter"/>
-	      
+              <dataRef key="teidata.count" maxOccurs="2"/>
             </attDef>
           </attList>
-	</elementSpec>
-
-	<dataSpec ident="teidata.pointer" mode="add">
+        </elementSpec>
+        <dataSpec ident="teidata.pointer" mode="add">
           <desc versionDate="2013-01-19" xml:lang="en">defines the range of attribute values used to
-          provide a single URI, absolute or relative, pointing to some other resource, either within
-          the current document or elsewhere.</desc>
+            provide a single URI, absolute or relative, pointing to some other resource, either
+            within the current document or elsewhere.</desc>
           <dataRef name="anyURI"/>
-	</dataSpec>
-	
-	<dataSpec ident="teidata.probCert" mode="add">
-          <desc versionDate="2015-05-20" xml:lang="en">defines a datatype which may indicate either probability or certainty.</desc>
-	    <alternate>
-              <dataRef key="teidata.probability"/>
-              <dataRef key="teidata.certainty"/>
-            </alternate>
-
-	</dataSpec>
-	
-	<dataSpec ident="teidata.count" mode="add">
-	  <desc>defines a datatype suitable for counters which must have either a positive integer value or the string "unbounded"</desc>
-	  <alternate>
+        </dataSpec>
+        <dataSpec ident="teidata.probCert" mode="add">
+          <desc versionDate="2015-05-20" xml:lang="en">defines a datatype which may indicate either
+            probability or certainty.</desc>
+          <alternate>
+            <dataRef key="teidata.probability"/>
+            <dataRef key="teidata.certainty"/>
+          </alternate>
+        </dataSpec>
+        <dataSpec ident="teidata.count" mode="add">
+          <desc>defines a datatype suitable for counters which must have either a positive integer
+            value or the string "unbounded"</desc>
+          <alternate>
             <dataRef name="nonNegativeInteger"/>
-	    <valList> <valItem ident="unbounded"/></valList>
-	  </alternate>
-	</dataSpec>
-
-	<elementSpec ident="one" mode="add">
+            <valList>
+              <valItem ident="unbounded"/>
+            </valList>
+          </alternate>
+        </dataSpec>
+        <elementSpec ident="one" mode="add">
           <desc>an empty element with an attribute</desc>
           <content/>
           <attList>
             <attDef ident="count" mode="add">
               <desc>how often the one element is used</desc>
-	      
-		<dataRef name="nonNegativeInteger"/>
-	      
+              <dataRef name="nonNegativeInteger"/>
             </attDef>
             <attDef ident="teicount" mode="add">
               <desc>another way of saying almost the same thing</desc>
-	      
-		<dataRef key="teidata.count"/>
-	      
+              <dataRef key="teidata.count"/>
             </attDef>
             <attDef ident="trixie">
               <desc>an integral percentage</desc>
-	      
-		<dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
-	      
+              <dataRef name="nonNegativeInteger" restriction="[0-9][0-9]?"/>
             </attDef>
           </attList>
-       </elementSpec>
-
+        </elementSpec>
       </schemaSpec>
     </body>
   </text>
