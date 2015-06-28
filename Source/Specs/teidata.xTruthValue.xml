@@ -1,4 +1,10 @@
-<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+<!--
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+-->
+<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+?><dataSpec xmlns="http://www.tei-c.org/ns/1.0"
           xmlns:tei="http://www.tei-c.org/ns/1.0"
           module="tei"
           ident="teidata.xTruthValue">
@@ -35,15 +41,13 @@
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi usati per
     esprimere un valore di verità potenzialmente sconosciuto</desc>
-  <content>
-      <alternate>
-         <dataRef name="boolean"/>
-         <valList>
-            <valItem ident="unknown"/>
-            <valItem ident="inapplicable"/>
-         </valList>
-      </alternate>
-   </content>
+  <alternate>
+      <dataRef name="boolean"/>
+      <valList>
+         <valItem ident="unknown"/>
+         <valItem ident="inapplicable"/>
+      </valList>
+   </alternate>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2010-10-29"
             xml:lang="en">

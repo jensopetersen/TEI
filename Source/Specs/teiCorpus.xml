@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
     Copyright TEI Consortium.
     Dual-licensed under CC-by and BSD2 licences
     See the file COPYING.txt for details
     $Date$
     $Id$
--->
-<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-<elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="core" ident="teiCorpus">
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="core" ident="teiCorpus">
   <desc versionDate="2005-12-24" xml:lang="en">contains the whole of a TEI encoded corpus, comprising a single corpus header and one or
     more TEI elements, each containing a single text header and a text.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">하나의 코퍼스 헤더와 몇 개의 TEI 요소로 구성된, 그리고 하나의 텍스트 헤더와 하나의 텍스트로
@@ -26,140 +23,140 @@
     intestazione del corpus e uno o più elementi TEI, ciascuno contenente un un singolo testo e la
     relatica intestazione.</desc>
   <classes>
-    <memberOf key="att.global"/>
+      <memberOf key="att.global"/>
   </classes>
   <content>
-    <group xmlns="http://relaxng.org/ns/structure/1.0">
-      <ref name="teiHeader"/>
-      <choice>
-        <group>
-          <oneOrMore>
-            <ref name="model.resourceLike"/>
-          </oneOrMore>
-          <zeroOrMore>
-            <choice>
-              <ref name="TEI"/>
-              <ref name="teiCorpus"/>
-            </choice>
-          </zeroOrMore>
-        </group>
-        <oneOrMore>
-          <choice>
-            <ref name="TEI"/>
-            <ref name="teiCorpus"/>
-          </choice>
-        </oneOrMore>
-      </choice>
-    </group>
+      <group xmlns="http://relaxng.org/ns/structure/1.0">
+         <ref name="teiHeader"/>
+         <choice>
+            <group>
+               <oneOrMore>
+                  <ref name="model.resourceLike"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="TEI"/>
+                     <ref name="teiCorpus"/>
+                  </choice>
+               </zeroOrMore>
+            </group>
+            <oneOrMore>
+               <choice>
+                  <ref name="TEI"/>
+                  <ref name="teiCorpus"/>
+               </choice>
+            </oneOrMore>
+         </choice>
+      </group>
   </content>
   <attList>
-    <attDef ident="version" usage="opt">
-      <desc versionDate="2005-12-24" xml:lang="en">The version of the TEI scheme</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">TEI 스키마의 버전</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">TEI架構的版本</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該TEIスキームの版．</desc>
-      <desc versionDate="2009-01-06" xml:lang="fr">la version du modèle TEI</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">La versión del esquema TEI</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">La versione dello schema TEI</desc>
-      <datatype>
-        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.version"/>
-      </datatype>
-      <defaultVal>5.0</defaultVal>
-    </attDef>
+      <attDef ident="version" usage="opt">
+         <desc versionDate="2005-12-24" xml:lang="en">The version of the TEI scheme</desc>
+         <desc versionDate="2007-12-20" xml:lang="ko">TEI 스키마의 버전</desc>
+         <desc versionDate="2007-05-02" xml:lang="zh-TW">TEI架構的版本</desc>
+         <desc versionDate="2008-04-05" xml:lang="ja">当該TEIスキームの版．</desc>
+         <desc versionDate="2009-01-06" xml:lang="fr">la version du modèle TEI</desc>
+         <desc versionDate="2007-05-04" xml:lang="es">La versión del esquema TEI</desc>
+         <desc versionDate="2007-01-21" xml:lang="it">La versione dello schema TEI</desc>
+         <datatype>
+            <dataRef key="teidata.version"/>
+         </datatype>
+         <defaultVal>5.0</defaultVal>
+      </attDef>
   </attList>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
-      <teiCorpus version="5.2">
-        <teiHeader>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+         <teiCorpus version="5.2">
+            <teiHeader>
           <!-- header for corpus -->
         </teiHeader>
-        <TEI>
-          <teiHeader>
+            <TEI>
+               <teiHeader>
             <!-- header for first text -->
           </teiHeader>
-          <text>
+               <text>
             <!-- content of first text -->
           </text>
-        </TEI>
-        <TEI>
-          <teiHeader>
+            </TEI>
+            <TEI>
+               <teiHeader>
             <!-- header for second text -->
           </teiHeader>
-          <text>
+               <text>
             <!-- content of second text -->
           </text>
-        </TEI>
-        <!-- more TEI elements here -->
+            </TEI>
+            <!-- more TEI elements here -->
       </teiCorpus>
-    </egXML>
+      </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
-      <teiCorpus>
-        <teiHeader>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+         <teiCorpus>
+            <teiHeader>
           <!--[en-tête du corpus]-->
         </teiHeader>
-        <TEI>
-          <teiHeader>
+            <TEI>
+               <teiHeader>
             <!--[en-tête du premier texte]-->
           </teiHeader>
-          <text>
+               <text>
             <!--[premier texte du corpus]-->
           </text>
-        </TEI>
-        <TEI>
-          <teiHeader>
+            </TEI>
+            <TEI>
+               <teiHeader>
             <!--[en-tête du deuxième texte]-->
           </teiHeader>
-          <text>
+               <text>
             <!--[deuxième texte du corpus]-->
           </text>
-        </TEI>
-      </teiCorpus>
-    </egXML>
+            </TEI>
+         </teiCorpus>
+      </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
-      <teiCorpus>
-        <teiHeader>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="feasible">
+         <teiCorpus>
+            <teiHeader>
           <!-- 該文集的總header -->
         </teiHeader>
-        <TEI>
-          <teiHeader>
+            <TEI>
+               <teiHeader>
             <!-- 第一個文章的header -->
           </teiHeader>
-          <text>
+               <text>
             <!-- 第一個文章的內容 -->
           </text>
-        </TEI>
-        <TEI>
-          <teiHeader>
+            </TEI>
+            <TEI>
+               <teiHeader>
             <!-- 第二個文章的header -->
           </teiHeader>
-          <text>
+               <text>
             <!-- 第二個文章的內容 -->
           </text>
-        </TEI>
-        <!-- 其他TEI元素 -->
+            </TEI>
+            <!-- 其他TEI元素 -->
       </teiCorpus>
-    </egXML>
+      </egXML>
   </exemplum>
   <remarks versionDate="2005-12-24" xml:lang="en">
-    <p rend="dataDesc">Must contain one TEI header for the corpus, and a series of <gi>TEI</gi>
+      <p rend="dataDesc">Must contain one TEI header for the corpus, and a series of <gi>TEI</gi>
       elements, one for each text.</p>
-    <p>This element is mandatory when applicable.</p>
+      <p>This element is mandatory when applicable.</p>
   </remarks>
   <remarks xml:lang="fr" versionDate="2007-06-12">
-    <p rend="dataDesc">Cet élément doit contenir un en-tête TEI pour le corpus, et une suite
+      <p rend="dataDesc">Cet élément doit contenir un en-tête TEI pour le corpus, et une suite
       d'éléments <gi>TEI</gi>, correspondant à autant de textes.</p>
-    <p>Cet élément est obligatoire quand il est applicable.</p>
+      <p>Cet élément est obligatoire quand il est applicable.</p>
   </remarks>
   <remarks xml:lang="ja" versionDate="2008-04-05">
-    <p rend="dataDesc"> コーパス全体にはひとつのTEIヘダーが，要素<gi>TEI</gi>にはひとつの 要素textがある． </p>
-    <p> 当該要素素は，適応できる場合，必須である． </p>
+      <p rend="dataDesc"> コーパス全体にはひとつのTEIヘダーが，要素<gi>TEI</gi>にはひとつの 要素textがある． </p>
+      <p> 当該要素素は，適応できる場合，必須である． </p>
   </remarks>
   <listRef>
-    <ptr target="#DS"/>
-    <ptr target="#CCDEF"/>
+      <ptr target="#DS"/>
+      <ptr target="#CCDEF"/>
   </listRef>
 </elementSpec>

@@ -1,4 +1,10 @@
-<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+<!--
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+-->
+<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+?><dataSpec xmlns="http://www.tei-c.org/ns/1.0"
           xmlns:tei="http://www.tei-c.org/ns/1.0"
           module="tei"
           ident="teidata.outputMeasurement">
@@ -27,10 +33,8 @@
          versionDate="2007-01-21"
          xml:lang="it">definisce una gamma di valori da impiegare nello
     specificare le dimensioni di un oggetto da inserire in rete</desc>
-  <content>
-      <dataRef name="token"
-               restriction="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
-   </content>
+  <dataRef name="token"
+            restriction="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
   <exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <figure>

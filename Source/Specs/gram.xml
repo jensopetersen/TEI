@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
 $Date$
 $Id$
--->
-<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-<elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="dictionaries" ident="gram">
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="dictionaries" ident="gram">
   <gloss versionDate="2005-01-14" xml:lang="en">grammatical information</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">문법 정보</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">文法資訊</gloss>
@@ -28,191 +25,191 @@ $Id$
   <desc versionDate="2007-01-21" xml:lang="it">all'interno di una voce in un dizionario o di un file
     terminologico, contiene informazioni relative a un termine, una parola o una forma.</desc>
   <classes>
-    <memberOf key="att.global"/>
-    <memberOf key="model.morphLike"/>
-    <memberOf key="att.lexicographic"/>
+      <memberOf key="att.global"/>
+      <memberOf key="model.morphLike"/>
+      <memberOf key="att.lexicographic"/>
   </classes>
   <content>
-    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.paraContent"/>
   </content>
   <attList>
-    <attDef ident="type" usage="opt">
-      <desc versionDate="2012-04-20" xml:lang="en">classifies the grammatical information given according to some convenient typology—in
+      <attDef ident="type" usage="opt">
+         <desc versionDate="2012-04-20" xml:lang="en">classifies the grammatical information given according to some convenient typology—in
         the case of terminological information, preferably the dictionary of data element types
         specified in <ref target="http://www.isocat.org/">ISO 12620</ref>.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">다양한 유형에 따라 문법 정보를 분류한다. - 전문용어 정보의 경우 가급적 ISO WD 12
+         <desc versionDate="2007-12-20" xml:lang="ko">다양한 유형에 따라 문법 정보를 분류한다. - 전문용어 정보의 경우 가급적 ISO WD 12
         620에서 명시한 데이터 요소 유형의 사전을 따른다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">用合適的分類方法將不同的文法資訊加以分類－若是專門術語，可參照 <ref target="http://www.isocat.org/">ISO 12620</ref>
+         <desc versionDate="2007-05-02" xml:lang="zh-TW">用合適的分類方法將不同的文法資訊加以分類－若是專門術語，可參照 <ref target="http://www.isocat.org/">ISO 12620</ref>
         所指定資料元素類別。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該文法情報の分類を示す．用語を示す場合，<ref target="http://www.isocat.org/">ISO 12620</ref>に従うこ とが望ましい．</desc>
-      <desc versionDate="2009-03-20" xml:lang="fr">classe l'information grammaticale fournie selon une
+         <desc versionDate="2008-04-05" xml:lang="ja">当該文法情報の分類を示す．用語を示す場合，<ref target="http://www.isocat.org/">ISO 12620</ref>に従うこ とが望ましい．</desc>
+         <desc versionDate="2009-03-20" xml:lang="fr">classe l'information grammaticale fournie selon une
         typologie particulière : dans le cas d'informations terminologiques, de préférence au moyen
         du dictionnaire des types d'éléments de données spécifiés dans la norme <ref target="http://www.isocat.org/">ISO 12620</ref>.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">clasifica la información gramatical dada de acuerdo a
+         <desc versionDate="2007-05-04" xml:lang="es">clasifica la información gramatical dada de acuerdo a
         una tipología funcional — en el caso de información terminológica, preferiblemente el
         diccionario de tipos de elemento de datos se especifica en <ref target="http://www.isocat.org/">ISO 12620</ref>.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">classifica le informazioni grammaticali secondo
+         <desc versionDate="2007-01-21" xml:lang="it">classifica le informazioni grammaticali secondo
         un'appropriata tipologia - nel caso di informazioni terminologiche, preferibilmente il
         dizionario di degli elementi specificati in <ref target="http://www.isocat.org/">ISO 12620</ref>.</desc>
-      <datatype>
-        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
-      </datatype>
-      <valList type="open">
-        <valItem ident="pos">
-          <gloss versionDate="2007-08-25" xml:lang="en">part of speech</gloss>
-          <gloss versionDate="2007-12-20" xml:lang="ko">품사</gloss>
-          <gloss versionDate="2007-06-12" xml:lang="fr">partie du discours (chacune des classes de mot
+         <datatype>
+            <dataRef key="teidata.enumerated"/>
+         </datatype>
+         <valList type="open">
+            <valItem ident="pos">
+               <gloss versionDate="2007-08-25" xml:lang="en">part of speech</gloss>
+               <gloss versionDate="2007-12-20" xml:lang="ko">품사</gloss>
+               <gloss versionDate="2007-06-12" xml:lang="fr">partie du discours (chacune des classes de mot
             auxquelles un mot peut appartenir dans une langue donnée, en fonction de la forme, du
             sens ou d'une combinaison de caractéristiques, par exemple nom, verbe, adjectif, etc.) </gloss>
-          <gloss versionDate="2007-11-06" xml:lang="it">parte del discorso</gloss>
-          <gloss versionDate="2007-05-04" xml:lang="es">parte del discurso (cualquiera de las categorías
+               <gloss versionDate="2007-11-06" xml:lang="it">parte del discorso</gloss>
+               <gloss versionDate="2007-05-04" xml:lang="es">parte del discurso (cualquiera de las categorías
             de palabras que se puede encontrar en una lengua dada, basándose en la forma,
             significado, o combinación de rasgos, p.ej. nombre, verbo, adjetivo, etc.)</gloss>
-          <desc versionDate="2007-08-25" xml:lang="en">any of the word classes to which a word may be assigned in a given language, based
+               <desc versionDate="2007-08-25" xml:lang="en">any of the word classes to which a word may be assigned in a given language, based
             on form, meaning, or a combination of features, e.g. noun, verb, adjective, etc.</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">형식, 의미, 또는 자질 결합에 근거하여 단어가 제시된 언어에서 할당될 수 있는 단어
+               <desc versionDate="2007-12-20" xml:lang="ko">형식, 의미, 또는 자질 결합에 근거하여 단어가 제시된 언어에서 할당될 수 있는 단어
             부류, 예, 명사, 동사, 형용사 등</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">詞性
+               <desc versionDate="2007-05-02" xml:lang="zh-TW">詞性
             (在已知語言中的詞性分類，根據字詞的形式、意義或特性組合而有所不同。例如名詞、動詞、形容詞等。)</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">cualquier clase de palabras a las que se puede
+               <desc versionDate="2008-04-06" xml:lang="es">cualquier clase de palabras a las que se puede
             asignar una palabra en una lengua dada, basándose en la forma, significado, o una
             combinación de las características, p.ej. sustantivo, verbo, adjetivo, etc.</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">当該語に関する分類．形，意味，素性の組み合わせなどによる． 例えば，名詞，動詞，形容詞など．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">toute catégorie grammaticale à laquelle un mot
+               <desc versionDate="2008-04-05" xml:lang="ja">当該語に関する分類．形，意味，素性の組み合わせなどによる． 例えば，名詞，動詞，形容詞など．</desc>
+               <desc versionDate="2008-03-30" xml:lang="fr">toute catégorie grammaticale à laquelle un mot
             peut être assigné dans une langue donnée, qui repose sur la morphologie, la sémantique,
             ou une combinaison de mots du discours, par exemple le nom, le verbe, l'adjectif, etc.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">parte del discorso (una qualsiasi delle classi a
+               <desc versionDate="2007-01-21" xml:lang="it">parte del discorso (una qualsiasi delle classi a
             cui una parola può essere assegnata in una data lingua, basata sulla forma, il
             significato o una combinazione di tratti, ad esempio nome, verbo, aggettivo,
           ecc.)</desc>
-        </valItem>
-        <valItem ident="gen">
-          <gloss versionDate="2007-08-25" xml:lang="en">gender</gloss>
-          <gloss versionDate="2007-12-20" xml:lang="ko">성</gloss>
-          <gloss versionDate="2007-06-12" xml:lang="fr">genre (classification formelle selon laquelle
+            </valItem>
+            <valItem ident="gen">
+               <gloss versionDate="2007-08-25" xml:lang="en">gender</gloss>
+               <gloss versionDate="2007-12-20" xml:lang="ko">성</gloss>
+               <gloss versionDate="2007-06-12" xml:lang="fr">genre (classification formelle selon laquelle
             les noms et pronoms et souvent les qualificatifs associés sont groupés et fléchis, ou
             prennent une autre forme afin d'exprimer certaines relations syntaxiques)</gloss>
-          <gloss versionDate="2007-11-06" xml:lang="it">genere</gloss>
-          <gloss versionDate="2007-05-04" xml:lang="es">género (clasificación formal para nombres y
+               <gloss versionDate="2007-11-06" xml:lang="it">genere</gloss>
+               <gloss versionDate="2007-05-04" xml:lang="es">género (clasificación formal para nombres y
             pronombres, y a menudo para modificadores que los acompañan, aparecen agrupados y
             flexionan o cambian de forma del mismo modo, y permiten controlar las relaciones
             sintácticas)</gloss>
-          <desc versionDate="2007-08-25" xml:lang="en">formal classification by which nouns and pronouns, and often accompanying modifiers,
+               <desc versionDate="2007-08-25" xml:lang="en">formal classification by which nouns and pronouns, and often accompanying modifiers,
             are grouped and inflected, or changed in form, so as to control certain syntactic
             relationships</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">특정 통사적 관련성을 통제하기 위해, 명사와 대명사, 그리고 종종 동반 수식어의 그룹을
+               <desc versionDate="2007-12-20" xml:lang="ko">특정 통사적 관련성을 통제하기 위해, 명사와 대명사, 그리고 종종 동반 수식어의 그룹을
             나누는, 굴절 또는 형태 변화에 따른 형식적 분류</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">性別
+               <desc versionDate="2007-05-02" xml:lang="zh-TW">性別
             (名詞、代名詞、或伴隨的修飾詞透過這樣的規則系統在表現形式上被加以分組、或產生屈折變化，以展現特定的語法關係。)</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">clasificación formal para la cual los sustantivos
+               <desc versionDate="2008-04-06" xml:lang="es">clasificación formal para la cual los sustantivos
             y los pronombres, y a menudo sus modificantes, son agrupados y jerarquiados, o variados
             en la forma, para controlar enlaces sintácticos</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">文法上の性．時に修飾詞を伴う名詞や代名詞がまとまり，屈折，す
+               <desc versionDate="2008-04-05" xml:lang="ja">文法上の性．時に修飾詞を伴う名詞や代名詞がまとまり，屈折，す
             なわち語形変形が行われ，ある統語的関係が示される．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">classification formelle par lequel des noms et
+               <desc versionDate="2008-03-30" xml:lang="fr">classification formelle par lequel des noms et
             des pronoms souvent avec des modificateurs, est groupée et conjuguée, ou changée
             morphologiquement, afin de contrôler certaines relations syntaxiques</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">genere (classificazione formale secondo cui i
+               <desc versionDate="2007-01-21" xml:lang="it">genere (classificazione formale secondo cui i
             nomi e i pronomi, e spesso i modificatori che li accompagnano, sono raggruppati e
             flessi, o cambiati di forma in modo da controllarne alcune relazioni sintattiche)</desc>
-        </valItem>
-        <valItem ident="num">
-          <gloss versionDate="2007-08-25" xml:lang="en">number</gloss>
-          <gloss versionDate="2007-12-20" xml:lang="ko">수</gloss>
-          <gloss versionDate="2007-06-12" xml:lang="fr">nombre (par exemple singulier, pluriel, duel,
+            </valItem>
+            <valItem ident="num">
+               <gloss versionDate="2007-08-25" xml:lang="en">number</gloss>
+               <gloss versionDate="2007-12-20" xml:lang="ko">수</gloss>
+               <gloss versionDate="2007-06-12" xml:lang="fr">nombre (par exemple singulier, pluriel, duel,
             etc.)</gloss>
-          <gloss versionDate="2007-11-06" xml:lang="it">numero</gloss>
-          <gloss versionDate="2007-05-04" xml:lang="es">número (p.ej. individual, plural, dual, ...)</gloss>
-          <desc versionDate="2007-08-25" xml:lang="en">grammatical number, e.g. singular, plural, dual, …</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">문법적 수. 예, 단수, 복수, 이중, …</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">單複數 (例如單數、複數、雙數詞等)</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">número gramatical, p.ej. singular, plural, dual,…</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">文法上の数．単数，複数，双数など．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">nombre grammatical, par exemple singulier,
+               <gloss versionDate="2007-11-06" xml:lang="it">numero</gloss>
+               <gloss versionDate="2007-05-04" xml:lang="es">número (p.ej. individual, plural, dual, ...)</gloss>
+               <desc versionDate="2007-08-25" xml:lang="en">grammatical number, e.g. singular, plural, dual, …</desc>
+               <desc versionDate="2007-12-20" xml:lang="ko">문법적 수. 예, 단수, 복수, 이중, …</desc>
+               <desc versionDate="2007-05-02" xml:lang="zh-TW">單複數 (例如單數、複數、雙數詞等)</desc>
+               <desc versionDate="2008-04-06" xml:lang="es">número gramatical, p.ej. singular, plural, dual,…</desc>
+               <desc versionDate="2008-04-05" xml:lang="ja">文法上の数．単数，複数，双数など．</desc>
+               <desc versionDate="2008-03-30" xml:lang="fr">nombre grammatical, par exemple singulier,
             pluriel, duel, …</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">numero (ad esempio singolare, plurale, duale,
+               <desc versionDate="2007-01-21" xml:lang="it">numero (ad esempio singolare, plurale, duale,
             ecc.)</desc>
-        </valItem>
-        <valItem ident="animate">
-          <desc versionDate="2007-06-27" xml:lang="en">animate or inanimate</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">유정 또는 무정</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">活的或非活的</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">animado o inanimado</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">生物，無生物．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">animé ou inanimé</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">animato o inanimato</desc>
-        </valItem>
-        <valItem ident="proper">
-          <desc versionDate="2007-06-27" xml:lang="en">proper noun or common noun</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">고유명사 또는 보통명사</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">特定名稱或一般名詞</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">nombre propio o común</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">固有名詞，一般名詞．</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">nom propre ou nom commun</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">nome proprio o nome comune</desc>
-        </valItem>
-      </valList>
-      <remarks versionDate="2010-07-07" xml:lang="en">
-        <p>A much fuller list of values for the <att>type</att>
+            </valItem>
+            <valItem ident="animate">
+               <desc versionDate="2007-06-27" xml:lang="en">animate or inanimate</desc>
+               <desc versionDate="2007-12-20" xml:lang="ko">유정 또는 무정</desc>
+               <desc versionDate="2007-05-02" xml:lang="zh-TW">活的或非活的</desc>
+               <desc versionDate="2008-04-06" xml:lang="es">animado o inanimado</desc>
+               <desc versionDate="2008-04-05" xml:lang="ja">生物，無生物．</desc>
+               <desc versionDate="2008-03-30" xml:lang="fr">animé ou inanimé</desc>
+               <desc versionDate="2007-01-21" xml:lang="it">animato o inanimato</desc>
+            </valItem>
+            <valItem ident="proper">
+               <desc versionDate="2007-06-27" xml:lang="en">proper noun or common noun</desc>
+               <desc versionDate="2007-12-20" xml:lang="ko">고유명사 또는 보통명사</desc>
+               <desc versionDate="2007-05-02" xml:lang="zh-TW">特定名稱或一般名詞</desc>
+               <desc versionDate="2008-04-06" xml:lang="es">nombre propio o común</desc>
+               <desc versionDate="2008-04-05" xml:lang="ja">固有名詞，一般名詞．</desc>
+               <desc versionDate="2008-03-30" xml:lang="fr">nom propre ou nom commun</desc>
+               <desc versionDate="2007-01-21" xml:lang="it">nome proprio o nome comune</desc>
+            </valItem>
+         </valList>
+         <remarks versionDate="2010-07-07" xml:lang="en">
+            <p>A much fuller list of values for the <att>type</att>
         attribute may be generated from the data category registry
         accessible from <ref target="http://www.isocat.org">http://www.isocat.org</ref> and
         maintained by ISO technical committee 37. <!--TC 37/SC 3/WD 12
         620, Computational Aids in Terminology. See ISO 12 620 for
         fuller details.--></p>
-      </remarks>
-      <remarks xml:lang="fr" versionDate="2007-06-12">
-        <p>Une liste de valeurs beaucoup plus complète pour l'attribut <att>type</att> peut être
+         </remarks>
+         <remarks xml:lang="fr" versionDate="2007-06-12">
+            <p>Une liste de valeurs beaucoup plus complète pour l'attribut <att>type</att> peut être
           produite à partir du dictionnaire des types d'éléments de données en préparation sous la
           référence ISO TC 37/SC 3/WD 12 620, Computational Aids in Terminology. Voir l'<ref target="http://www.isocat.org/">ISO 12620</ref>
           pour plus de détails. </p>
-      </remarks>
-      <remarks xml:lang="ja" versionDate="2008-04-05">
-        <p> 属性<att>type</att>に付与される値の全リストは， ISO TC 37/SC 3が策定したWD 12620 Computational Aids in
+         </remarks>
+         <remarks xml:lang="ja" versionDate="2008-04-05">
+            <p> 属性<att>type</att>に付与される値の全リストは， ISO TC 37/SC 3が策定したWD 12620 Computational Aids in
           Terminologyにあるデータ要素型から得られるだろう． 詳細は，<ref target="http://www.isocat.org/">ISO 12620</ref> Computer applications in terminology -- Data
           categoriews --を参照のこと． </p>
-      </remarks>
-    </attDef>
+         </remarks>
+      </attDef>
   </attList>
   <exemplum xml:lang="en">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <entry>
-        <form>
-          <orth>pamplemousse</orth>
-        </form>
-        <gramGrp>
-          <gram type="pos">noun</gram>
-          <gram type="gen">masculine</gram>
-        </gramGrp>
-      </entry>
-    </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <entry>
+            <form>
+               <orth>pamplemousse</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">noun</gram>
+               <gram type="gen">masculine</gram>
+            </gramGrp>
+         </entry>
+      </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <entry>
-        <form>
-          <orth>pamplemousse</orth>
-        </form>
-        <gramGrp>
-          <gram type="pos">nom</gram>
-          <gram type="gen">masculin</gram>
-        </gramGrp>
-      </entry>
-    </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <entry>
+            <form>
+               <orth>pamplemousse</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">nom</gram>
+               <gram type="gen">masculin</gram>
+            </gramGrp>
+         </entry>
+      </egXML>
   </exemplum>
   <exemplum xml:lang="zh-TW">
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <entry>
-        <form>
-          <orth>pamplemousse</orth>
-        </form>
-        <gramGrp>
-          <gram type="pos">名詞</gram>
-          <gram type="gen">陽性</gram>
-        </gramGrp>
-      </entry>
-    </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <entry>
+            <form>
+               <orth>pamplemousse</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">名詞</gram>
+               <gram type="gen">陽性</gram>
+            </gramGrp>
+         </entry>
+      </egXML>
   </exemplum>
-<!-- Following remarks refer to attributes @group and @depend, but
+   <!-- Following remarks refer to attributes @group and @depend, but
      these are not available since we no longer have terminological data -->
 <!--
   <remarks versionDate="2013-09-06" xml:lang="en">
@@ -239,6 +236,6 @@ $Id$
     <!-- Note: the reference to 'otherForm' in the japanese needs to be removed - JamesC -->
 
   <listRef>
-    <ptr target="#DITPGR" type="div1"/>
+      <ptr target="#DITPGR" type="div1"/>
   </listRef>
 </elementSpec>
