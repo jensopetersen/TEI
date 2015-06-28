@@ -1,4 +1,10 @@
-<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+<!--
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+-->
+<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+?><dataSpec xmlns="http://www.tei-c.org/ns/1.0"
           xmlns:tei="http://www.tei-c.org/ns/1.0"
           module="tei"
           ident="teidata.temporal.iso">
@@ -34,19 +40,17 @@
     expresión temporal como una fecha, una hora, o una combinación de estas, de acuerdo a un
     estándard internacional <title>Elementos de datos y formatos de intercambio - Intercambio de
       información – Representación de fechas y horas</title>.</desc>
-  <content>
-      <alternate>
-         <dataRef name="date"/>
-         <dataRef name="gYear"/>
-         <dataRef name="gMonth"/>
-         <dataRef name="gDay"/>
-         <dataRef name="gYearMonth"/>
-         <dataRef name="gMonthDay"/>
-         <dataRef name="time"/>
-         <dataRef name="dateTime"/>
-         <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-      </alternate>
-   </content>
+  <alternate>
+      <dataRef name="date"/>
+      <dataRef name="gYear"/>
+      <dataRef name="gMonth"/>
+      <dataRef name="gDay"/>
+      <dataRef name="gYearMonth"/>
+      <dataRef name="gMonthDay"/>
+      <dataRef name="time"/>
+      <dataRef name="dateTime"/>
+      <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
+   </alternate>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2007-04-13"
             xml:lang="en">

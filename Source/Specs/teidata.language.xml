@@ -1,44 +1,32 @@
-<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+<!--
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+-->
+<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+?><dataSpec xmlns="http://www.tei-c.org/ns/1.0"
           xmlns:tei="http://www.tei-c.org/ns/1.0"
           module="tei"
           ident="teidata.language">
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-10-18"
-         xml:lang="en">defines the range of attribute values used to identify a particular combination of human
+  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used to identify a particular combination of human
     language and writing system.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-12-20"
-         xml:lang="ko">인간의 언어와 문자 체계의 특별한 조합을 식별하는 속성 값 범위를 정의한다.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-05-02"
-         xml:lang="zh-TW">定義的屬性值範圍標明人類語言與寫作系統的特殊結合</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2008-04-05"
-         xml:lang="ja">自然言語を示す属性値の範囲を定義する．</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-06-12"
-         xml:lang="fr">définit la gamme des
+  <desc versionDate="2007-12-20" xml:lang="ko">인간의 언어와 문자 체계의 특별한 조합을 식별하는 속성 값 범위를 정의한다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍標明人類語言與寫作系統的特殊結合</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">自然言語を示す属性値の範囲を定義する．</desc>
+  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des
   valeurs d'attributs exprimant 
     une combinaison particulière du langage humain avec un système d'écriture.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-05-04"
-         xml:lang="es">define la gama de valores de atributos usados para
+  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
     identificar una combinación determinada de lenguaje y escritura humanos.</desc>
-  <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         versionDate="2007-01-21"
-         xml:lang="it">definisce la gamma di valori di attributi usati per
+  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
     identificare una determinata combinazione di linguaggio e sistema di scrittura umani</desc>
-  <content>
-      <alternate>
-         <dataRef name="language"/>
-         <valList>
-            <valItem ident=""/>
-         </valList>
-      </alternate>
-   </content>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
-            versionDate="2009-06-29"
-            xml:lang="en">
+  <alternate>
+      <dataRef name="language"/>
+      <valList>
+         <valItem ident=""/>
+      </valList>
+   </alternate>
+  <remarks versionDate="2009-06-29" xml:lang="en">
       <p>The values for this attribute are language <soCalled>tags</soCalled> as defined in <ref target="http://tools.ietf.org/html/bcp47">BCP 47</ref>. Currently BCP 47 comprises RFC 4646
       and RFC 4647; over time, other IETF documents may succeed these as the best current practice.</p>
       <p>A <soCalled>language tag</soCalled>, per BCP 47, is assembled from a sequence of components
@@ -123,9 +111,7 @@
       <p>The W3C Internationalization Activity has published a useful introduction to BCP 47, <ref target="http://www.w3.org/International/articles/language-tags/Overview.en.php">Language
         tags in HTML and XML</ref>.</p>
   </remarks>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
-            xml:lang="ja"
-            versionDate="2008-04-05">
+  <remarks xml:lang="ja" versionDate="2008-04-05">
       <p> 当該属性値は， <ref target="http://tools.ietf.org/html/bcp47">BCP 47</ref>
       で定義されている言語<soCalled>タグ</soCalled>になる． 現行のBCPには，RFC4646とRFC4647の内容が含まれている．
       今後は，他のIETF文書も採用されるかもしれない． </p>
@@ -196,9 +182,7 @@
       <p> W3Cの国際化活動では，BCP 47の解説を以下に用意している． <ref target="http://www.w3.org/International/articles/language-tags/Overview.en.php">
         HTMLとXMLで使用される言語タグ</ref>. </p>
   </remarks>
-  <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
-            versionDate="2009-10-06"
-            xml:lang="fr">
+  <remarks versionDate="2009-10-06" xml:lang="fr">
       <p>Les valeurs pour cet attribut sont les <soCalled>étiquettes</soCalled> de langue définies
         dans la norme <ref target="http://tools.ietf.org/html/bcp47">BCP 47</ref>. Actuellement, la norme BCP 47
       intègre les normes RFC 4646 et RFC 4647 ; à l'avenir, d'autres documents de l'IETF pourront leur succéder en
@@ -289,7 +273,7 @@
         tags in HTML and XML</ref>.</p>
       <!-- shuld be in bibliog -->
   </remarks>
-  <listRef xmlns:rng="http://relaxng.org/ns/structure/1.0">
+  <listRef>
       <ptr target="#CHSH"/>
   </listRef>
 </dataSpec>

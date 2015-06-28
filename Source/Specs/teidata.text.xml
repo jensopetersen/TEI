@@ -1,4 +1,10 @@
-<dataSpec xmlns="http://www.tei-c.org/ns/1.0"
+<!--
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+-->
+<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+?><dataSpec xmlns="http://www.tei-c.org/ns/1.0"
           xmlns:tei="http://www.tei-c.org/ns/1.0"
           module="tei"
           ident="teidata.text">
@@ -12,9 +18,7 @@
          versionDate="2007-06-12">définit la gamme des valeurs d'attributs 
       exprimant une chaine de caracteres Unicode, y compris des
   espaces blancs.</desc>
-  <content>
-      <dataRef name="string"/>
-   </content>
+  <dataRef name="string"/>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2012-06-17"
             xml:lang="en">
