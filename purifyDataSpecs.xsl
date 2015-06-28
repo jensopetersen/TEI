@@ -15,7 +15,17 @@
     
     <xsl:template match="tei:macroSpec[@type='dt']">
     
-        <xsl:result-document href="{concat('tei',@ident)}">
+        <xsl:result-document href="{concat('tei',@ident,'.xml')}">
+
+<xsl:comment>
+Copyright TEI Consortium. 
+Dual-licensed under CC-by and BSD2 licences 
+See the file COPYING.txt for details
+</xsl:comment><xsl:text>
+</xsl:text>
+<xsl:processing-instruction name="xml-model">
+ href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+</xsl:processing-instruction>
         <dataSpec  xmlns="http://www.tei-c.org/ns/1.0">
           <xsl:attribute name="module">
               <xsl:value-of select="@module"/>
@@ -36,7 +46,7 @@
     </xsl:template>
     
     <xsl:template match="tei:content">
-        <content>
+
         <xsl:choose>
             <xsl:when test="rng:choice">
                 <alternate>
@@ -72,7 +82,7 @@
                 <textNode/>
             </xsl:otherwise>
         </xsl:choose>
-        </content>
+
     </xsl:template>
   
     <!-- copy everything else -->

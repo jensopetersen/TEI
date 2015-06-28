@@ -1250,7 +1250,7 @@ entities in the XML DTD fragments.--></p>
           <specDesc key="teidata.probability"/>
           <specDesc key="teidata.numeric"/>
           <specDesc key="teidata.interval"/>
-          <specDesc key="teidata.percentage"/>-->
+          <specDesc key="teidata.percentage"/>
           <specDesc key="teidata.count"/>
         </specList>
      
@@ -1264,6 +1264,7 @@ entities in the XML DTD fragments.--></p>
       <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-1"
         n="Numeric Datatypes">
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.certainty.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.xml"/>
 
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.probability.xml"/>
 

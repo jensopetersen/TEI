@@ -7,6 +7,8 @@
   exclude-result-prefixes="tei rng xsl teix"
  version="2.0">
 
+<!-- run this against every *spec file containing a datatype -->
+
 <xsl:output 
    method="xml"
    encoding="utf-8"
