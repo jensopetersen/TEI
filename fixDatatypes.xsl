@@ -18,8 +18,19 @@
   <xsl:template match="tei:datatype">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
-      <dataRef key="{concat('tei',rng:ref/@name)}"/>
-    </xsl:copy>
+      <xsl:choose>
+        <xsl:when test="rng:ref">  <dataRef key="{concat('tei',rng:ref/@name)}"/>
+        </xsl:when>
+        <xsl:when test="rng:data">  <dataRef name="{rng:data/@type}"/>
+        </xsl:when>
+        <xsl:when test="rng:text">  <textNode/>
+        </xsl:when>
+        
+       <xsl:otherwise>
+          <xsl:message>ERROR : datatypes must be atomic</xsl:message>
+        </xsl:otherwise>
+      </xsl:choose>
+      </xsl:copy>
   </xsl:template>
   
 <!-- copy everything else -->
