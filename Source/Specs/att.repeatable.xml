@@ -26,7 +26,7 @@ $Id$
 	      identifying a context within which this component of a
 	      content model must be found</desc>
               <datatype>
-            <dataRef key="tei"/>
+            <dataRef key="teidata.xpath"/>
          </datatype>
             </attDef>
         <attDef ident="minOccurs">
@@ -52,9 +52,7 @@ $Id$
               <gloss versionDate="2007-05-04" xml:lang="es">número máximo de apariciones.</gloss>
               <desc versionDate="2013-11-21" xml:lang="en">indicates the largest  number of times this component  may
       occur.</desc>
-              <datatype>
-            <dataRef key="tei"/>
-         </datatype>
+              <datatype><dataRef key="teidata.unboundedInt"/></datatype>
               <defaultVal>1</defaultVal>
             </attDef>
    </attList>

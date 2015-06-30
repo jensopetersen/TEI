@@ -35,7 +35,7 @@ metrical structure of the element.</desc>
          <desc versionDate="2007-05-04" xml:lang="es">contiene una codificación definida por el usuario de la estructura métrica convencional del elemento.</desc>
          <desc versionDate="2007-01-21" xml:lang="it">contiene una codifica, definita dall'utente, della struttura metrica convenzionale dell'elemento</desc>
          <datatype>
-            <dataRef key="tei"/>
+            <dataRef name="token"/>
          </datatype>
          <remarks versionDate="2013-12-08" xml:lang="en">
             <p>The pattern may be specified by means of either a standard term for
@@ -74,7 +74,7 @@ of the conventional metrical structure applicable to the element.</desc>
          <desc versionDate="2007-05-04" xml:lang="es">contiene un codificación definida por el usuario para la realización efectiva de la estructura métrica convencional aplicable al elemento.</desc>
          <desc versionDate="2007-01-21" xml:lang="it">contiene una codifica, definita dall'utente, dell'effettiva realizzazione della struttura metrica convenzionale applicabile all'elemento</desc>
          <datatype>
-            <dataRef key="tei"/>
+            <dataRef name="token"/>
          </datatype>
          <remarks versionDate="2013-12-08" xml:lang="en">
             <p>The pattern may be specified by means of either a standard term for
@@ -114,7 +114,7 @@ to that specified or implied for the <att>met</att> attribute.</p>
          <desc versionDate="2007-05-04" xml:lang="es">especifica el esquema de la rima de un grupo de versos.</desc>
          <desc versionDate="2007-01-21" xml:lang="it">specifica lo schema rimico di un gruppo di versi</desc>
          <datatype>
-            <dataRef key="tei"/>
+            <dataRef name="token"/>
          </datatype>
          <remarks versionDate="2013-12-08" xml:lang="en">
             <p>By default, the rhyme scheme is expressed as a string of

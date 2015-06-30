@@ -21,7 +21,6 @@ $Id$
   <content>
       <choice xmlns="http://relaxng.org/ns/structure/1.0">
          <ref name="macroRef"/>
-         <ref name="dataRef"/>
          <oneOrMore>
             <group>
                <ref name="macro.schemaPattern"/>
@@ -68,9 +67,7 @@ $Id$
 					de ce type de données dans la spécification de l'attribut.</desc>
          <desc versionDate="2007-11-06" xml:lang="it">indica il numero massimo di volte che questo tipo di dati può verificarsi nella definizione dell'attributo da definire</desc>
          <desc versionDate="2007-05-04" xml:lang="es">indica el máximo número de veces que los tipo de datos pueden aparecer en la especificación del atributo que se define.</desc>
-         <datatype>
-            <dataRef key="tei"/>
-         </datatype>
+          <datatype><dataRef key="teidata.unboundedInt"/></datatype>
          <defaultVal>1</defaultVal>
       </attDef>
   </attList>

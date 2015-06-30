@@ -119,9 +119,7 @@ in the text.</desc>
           alternativo especificado por <att>assertedValue</att>; si no
           viene dado ninguno, se aplica al marcaje en el texto.</desc>
          <desc versionDate="2007-01-21" xml:lang="it">assegna un valore alternativo all'apetto della codifica in questione, un identificatore generico, una trascrizione, il valore di un attributo, o l'identificatore di un elemento <gi>anchor</gi> (per indicare una posizione di inizio o fine alternativa). Se viene fornito un attributo <att>assertedValue</att>, il livello di sicurezza specificato dall'attributo <att>degree</att> si applica alla codifica alternativa specificata dall'attributo <att>assertedValue</att>; se non viene fornito alcun attributo, si applica alla codifica del testo.</desc>
-         <datatype>
-            <dataRef key="tei"/>
-         </datatype>
+         <datatype/>
          <exemplum xml:lang="en">
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <certainty target="#ESX" locus="name" assertedValue="placeName" cert="low">
