@@ -9,7 +9,7 @@
              xmlns:sch="http://purl.oclc.org/dsdl/schematron"
              xmlns:rng="http://relaxng.org/ns/structure/1.0"
              module="tagdocs"
-             ident="macroRef">
+             ident="dataRef">
   <desc versionDate="2010-05-14" xml:lang="en">identifies the datatype of an attribute value, either by referencing an item in an externally defined datatype library, or by
     pointing to a TEI-defined data specification</desc>
   <classes>
