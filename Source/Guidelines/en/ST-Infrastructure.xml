@@ -1265,7 +1265,6 @@ entities in the XML DTD fragments.--></p>
         n="Numeric Datatypes">
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.certainty.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.faux.xml"/>
 
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.probability.xml"/>
 
