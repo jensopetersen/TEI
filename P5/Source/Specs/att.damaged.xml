@@ -107,8 +107,11 @@ $Id$
         escala funcional; la etiqueta <gi>damage</gi> (daño) con el atributo <att>degree</att>
         (grado) deberán utilizarse sólo si el texto puede ser leído con una cierta certeza; los
         textos proporcionados por otras fuentes serán etiquetados como <gi>supplied</gi> (suplente)</desc>
-         <datatype>
-            <dataRef key="tei"/>
+        <datatype>
+	  <alternate>
+            <dataRef key="teidata.probability"/>
+            <dataRef key="teidata.certainty"/>
+	  </alternate>
          </datatype>
          <remarks versionDate="2013-11-22" xml:lang="en">
             <p>The <gi>damage</gi> element is appropriate where it is

@@ -19,13 +19,16 @@ See the file COPYING.txt for details
   <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
     identificar una combinación determinada de lenguaje y escritura humanos.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
-    identificare una determinata combinazione di linguaggio e sistema di scrittura umani</desc>
-  <alternate>
+    identificare una determinata combinazione di linguaggio e sistema
+  di scrittura umani</desc>
+  <datatype>
+    <alternate>
       <dataRef name="language"/>
       <valList>
          <valItem ident=""/>
       </valList>
-   </alternate>
+    </alternate>
+  </datatype>
   <remarks versionDate="2009-06-29" xml:lang="en">
       <p>The values for this attribute are language <soCalled>tags</soCalled> as defined in <ref target="http://tools.ietf.org/html/bcp47">BCP 47</ref>. Currently BCP 47 comprises RFC 4646
       and RFC 4647; over time, other IETF documents may succeed these as the best current practice.</p>
