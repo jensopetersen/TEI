@@ -82,31 +82,32 @@ should correspond to an existing module, via a moduleSpec or
             <dataRef key="teidata.xmlName"/>
          </datatype>
       </attDef>
-      <attDef ident="status" usage="opt" validUntil="2015-06-19">
-         <desc versionDate="2010-11-01" xml:lang="en">indicates the current status of the object identified with
+      <!--    MDH: Deprecation period ran out for this attribute. Commenting it out just in case. -->
+    <!--<attDef ident="status" usage="opt" validUntil="2015-06-19">
+      <desc versionDate="2010-11-01" xml:lang="en">indicates the current status of the object identified with
 respect to the current version of the TEI Guidelines.</desc>
-         <datatype>
-            <dataRef key="teidata.enumerated"/>
-         </datatype>
-         <defaultVal>stable</defaultVal>
-         <valList type="closed">
-            <valItem ident="deprecated" validUntil="2015-06-30">
-               <desc versionDate="2010-11-01" xml:lang="en">the item is not recommended for use,
+      <datatype>
+        <rng:ref name="data.enumerated"/>
+      </datatype>
+      <defaultVal>stable</defaultVal>
+      <valList type="closed">
+        <valItem ident="deprecated" validUntil="2015-06-30">
+          <desc versionDate="2010-11-01" xml:lang="en">the item is not recommended for use,
 and may be withdrawn at a future release.</desc>
-            </valItem>
-            <valItem ident="unstable">
-               <desc versionDate="2010-11-01" xml:lang="en">the item is new and still under
+        </valItem>
+        <valItem ident="unstable">
+          <desc versionDate="2010-11-01" xml:lang="en">the item is new and still under
 review.</desc>
-            </valItem>
-            <valItem ident="changed">
-               <desc versionDate="2010-11-01" xml:lang="en">the item has changed significantly since the
+        </valItem>
+        <valItem ident="changed">
+          <desc versionDate="2010-11-01" xml:lang="en">the item has changed significantly since the
 preceding version.</desc>
-            </valItem>
-            <valItem ident="stable">
-               <desc versionDate="2010-11-01" xml:lang="en">the item has not recently changed and is
+        </valItem>
+        <valItem ident="stable">
+          <desc versionDate="2010-11-01" xml:lang="en">the item has not recently changed and is
 not expected to do so except for correction of any errors.</desc>
-            </valItem>
-         </valList>
-      </attDef>
+        </valItem>
+      </valList>
+    </attDef>-->
   </attList>
 </classSpec>

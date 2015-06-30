@@ -67,9 +67,7 @@ $Id$
       <attDef ident="prefix" usage="opt">
          <desc versionDate="2010-06-23" xml:lang="en">specifies a default prefix which will be prepended to all patterns
       relating to the element, unless otherwise stated.</desc>
-         <datatype>
-            <dataRef key="tei"/>
-         </datatype>
+         <datatype minOccurs="0"/>
          <remarks versionDate="2010-06-23" xml:lang="en">
             <p>Colons, although permitted inside the value, will cause an
 	invalid schema to be generated.</p>

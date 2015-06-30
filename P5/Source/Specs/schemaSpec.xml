@@ -77,8 +77,8 @@ $Id$
 					des schémas externes ayant des éléments de même nom que ceux de la TEI</desc>
          <desc versionDate="2007-05-04" xml:lang="es">especifica un prefijo que será antepuesto a todos los patrones relativos a los elementos TEI.</desc>
          <desc versionDate="2007-01-21" xml:lang="it">indica un prefisso che sarà anteposto a tutti i pattern relativi a elementi TEI; questo consente</desc>
-         <datatype>
-            <dataRef key="tei"/>
+         <datatype minOccurs="0">
+            <dataRef key="teidata.xmlName"/>
          </datatype>
          <remarks versionDate="2013-05-06" xml:lang="en">
             <p>Use of this attribute allows an external schema which

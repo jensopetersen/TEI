@@ -40,7 +40,7 @@ defined in <ptr target="#XSLT2"/> which  identifies a set
       context of the element bearing this attribute if it is not.
 </desc>
          <datatype>
-            <textNode/>
+            <dataRef key="teidata.xpath"/>
          </datatype>
          <exemplum xml:lang="en">
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
