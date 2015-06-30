@@ -27,7 +27,12 @@ $Id$
   </teiHeader>
   <text>
     <body>
-      <schemaSpec ident="p5odds" prefix="TEI_" start="TEI schemaSpec elementSpec classSpec macroSpec div">
+      <schemaSpec ident="p5odds" prefix="TEI_" start="TEI schemaSpec
+						      elementSpec
+						      classSpec
+						      macroSpec
+						      dataSpec
+						      div">
         <moduleRef key="header"/>
         <moduleRef key="core"/>
         <moduleRef key="tei"/>
