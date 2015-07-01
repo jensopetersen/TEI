@@ -63,7 +63,7 @@ p5.xml: ${DRIVER} Source/Specs/*.xml Source/Guidelines/en/*.xml p5odds.odd check
 		git log --max-count=1 --pretty=format:"<info type=\"git\"><entry><commit revision=\"%h\"><date>%ai</date></commit></entry></info>" > repodate.xml ; \
 	fi
 	@echo BUILD: Generate modular DTDs, Schemas, Schematron and miscellaneous outputs
-	${ANT} -lib Utilities/lib/jing.jar:Utilities/lib/${SAXONJAR} -f antbuilder.xml -DXSL=${XSL} -DDRIVER=${DRIVER} base subset outputs
+	${ANT} -lib Utilities/lib/jing.jar:Utilities/lib/${SAXONJAR} -f antbuilder.xml -DXSL=${XSL} -DDRIVER=${DRIVER} -Dverbose=${VERBOSE} base subset outputs
 	@echo "BUILD: Generate modular RELAX NG (compact) schemas using trang"
 	(cd Schema; for i in *rng; do java -jar ../Utilities/lib/trang.jar $$i `basename $$i .rng`.rnc;done)
 	touch schemas.stamp
@@ -183,7 +183,7 @@ valid: check.stamp p5.xml
 	@echo BUILD: Check validity with rnv if we have it
 	-command -v  rnv && rnv -v p5odds.rnc p5.xml
 	@echo BUILD: Check validity with special-purpose XSL code, looking for bad links etc
-	${ANT} -lib Utilities/lib/${SAXONJAR} -f antbuilder.xml -DXSL=${XSL} validators		
+	${ANT} -lib Utilities/lib/${SAXONJAR} -f antbuilder.xml -Dverbose=${VERBOSE} -DXSL=${XSL} validators		
 	@grep -v "ARNING: use of deprecated element" ValidatorLog.xml
 	(grep -q "<ERROR>" ValidatorLog.xml;if [ $$? -ne 1 ] ; then echo "Oh dear me. ERROR found";diff ValidatorLog.xml expected-results/ValidatorLog.xml;false; fi)
 	sh graphics.sh

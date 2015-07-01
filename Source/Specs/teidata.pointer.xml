@@ -32,8 +32,12 @@ resource, either within the current document or elsewhere.</desc>
          xml:lang="es">define una gama de valores de atributos usados para proporcionar un indicador de cualquier recurso, bien en el documento corriente o en otro.</desc>
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-01-21"
-         xml:lang="it">definisce la gamma di valori di attributi usati per indicare un unico puntatore rispetto a qualsiasi altra risorsa all'interno del documento corrente o altrove</desc>
-  <dataRef name="anyURI"/>
+         xml:lang="it">definisce la gamma di valori di attributi usati
+  per indicare un unico puntatore rispetto a qualsiasi altra risorsa
+  all'interno del documento corrente o altrove</desc>
+  <content>
+    <dataRef name="anyURI"/>
+  </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2011-12-12"
             xml:lang="en">
