@@ -11,7 +11,9 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2013-04-14"
          xml:lang="en">defines the range of attribute values used for version numbers.</desc>
-  <dataRef name="token" restriction="[\d]+[a-z]*[\d]*(\.[\d]+[a-z]*[\d]*){0,3}"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="token" restriction="[\d]+[a-z]*[\d]*(\.[\d]+[a-z]*[\d]*){0,3}"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-04-14"
             xml:lang="en">

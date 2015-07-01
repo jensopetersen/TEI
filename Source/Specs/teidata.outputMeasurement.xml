@@ -33,8 +33,10 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce una gamma di valori da impiegare nello
     specificare le dimensioni di un oggetto da inserire in rete</desc>
-  <dataRef name="token"
-            restriction="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="token"
+               restriction="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
+   </content>
   <exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <figure>

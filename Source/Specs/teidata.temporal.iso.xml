@@ -40,17 +40,19 @@ See the file COPYING.txt for details
     expresión temporal como una fecha, una hora, o una combinación de estas, de acuerdo a un
     estándard internacional <title>Elementos de datos y formatos de intercambio - Intercambio de
       información – Representación de fechas y horas</title>.</desc>
-  <alternate>
-      <dataRef name="date"/>
-      <dataRef name="gYear"/>
-      <dataRef name="gMonth"/>
-      <dataRef name="gDay"/>
-      <dataRef name="gYearMonth"/>
-      <dataRef name="gMonthDay"/>
-      <dataRef name="time"/>
-      <dataRef name="dateTime"/>
-      <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-   </alternate>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <alternate>
+         <dataRef name="date"/>
+         <dataRef name="gYear"/>
+         <dataRef name="gMonth"/>
+         <dataRef name="gDay"/>
+         <dataRef name="gYearMonth"/>
+         <dataRef name="gMonthDay"/>
+         <dataRef name="time"/>
+         <dataRef name="dateTime"/>
+         <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
+      </alternate>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2007-04-13"
             xml:lang="en">

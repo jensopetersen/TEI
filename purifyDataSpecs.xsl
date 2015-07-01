@@ -46,7 +46,7 @@ See the file COPYING.txt for details
     </xsl:template>
     
     <xsl:template match="tei:content">
-
+<xsl:copy>
         <xsl:choose>
             <xsl:when test="rng:choice">
                 <alternate>
@@ -82,7 +82,7 @@ See the file COPYING.txt for details
                 <textNode/>
             </xsl:otherwise>
         </xsl:choose>
-
+</xsl:copy>
     </xsl:template>
   
     <!-- copy everything else -->

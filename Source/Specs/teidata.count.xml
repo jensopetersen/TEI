@@ -32,7 +32,9 @@ integer value used as a count.</desc>
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi usati per un numero intero non negativo impiegato come computo</desc>
-  <dataRef name="nonNegativeInteger"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="nonNegativeInteger"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2009-07-29"
             xml:lang="en">

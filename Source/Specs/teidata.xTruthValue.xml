@@ -41,13 +41,15 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi usati per
     esprimere un valore di verità potenzialmente sconosciuto</desc>
-  <alternate>
-      <dataRef name="boolean"/>
-      <valList>
-         <valItem ident="unknown"/>
-         <valItem ident="inapplicable"/>
-      </valList>
-   </alternate>
+  <content >
+      <alternate>
+         <dataRef name="boolean"/>
+         <valList>
+            <valItem ident="unknown"/>
+            <valItem ident="inapplicable"/>
+         </valList>
+      </alternate>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2010-10-29"
             xml:lang="en">

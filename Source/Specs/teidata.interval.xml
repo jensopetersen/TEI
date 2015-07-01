@@ -11,14 +11,16 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2013-04-13"
          xml:lang="en">defines attribute values used to express an interval value.</desc>
-  <alternate>
-      <dataRef name="float"/>
-      <valList>
-         <valItem ident="regular"/>
-         <valItem ident="irregular"/>
-         <valItem ident="unknown"/>
-      </valList>
-   </alternate>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <alternate>
+         <dataRef name="float"/>
+         <valList>
+            <valItem ident="regular"/>
+            <valItem ident="irregular"/>
+            <valItem ident="unknown"/>
+         </valList>
+      </alternate>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-04-13"
             xml:lang="en">

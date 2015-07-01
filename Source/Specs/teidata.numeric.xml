@@ -32,11 +32,13 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi usati per
     valori numerici</desc>
-  <alternate>
-      <dataRef name="double"/>
-      <dataRef name="token" restriction="(\-?[\d]+/\-?[\d]+)"/>
-      <dataRef name="decimal"/>
-   </alternate>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <alternate>
+         <dataRef name="double"/>
+         <dataRef name="token" restriction="(\-?[\d]+/\-?[\d]+)"/>
+         <dataRef name="decimal"/>
+      </alternate>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2009-06-01"
             xml:lang="en">
