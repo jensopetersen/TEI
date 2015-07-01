@@ -27,7 +27,9 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-05-04"
          xml:lang="es">define la gama de valores de atributos disponibles para la representación de un periodo de tiempo usando tipos de datos W3C</desc>
-  <dataRef name="duration"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="duration"/>
+   </content>
   <exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <time dur="PT45M">forty-five minutes</time>

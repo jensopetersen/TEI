@@ -32,7 +32,9 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi che esprimono
     una probabilità</desc>
-  <dataRef name="double"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="double"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2005-10-18"
             xml:lang="en">

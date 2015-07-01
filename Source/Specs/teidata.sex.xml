@@ -32,7 +32,9 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce una gamma di valori di attributi usati per
     identificare il sesso umano o animale</desc>
-  <dataRef key="teidata.word"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef key="teidata.word"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-04-14"
             xml:lang="en">

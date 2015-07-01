@@ -38,7 +38,9 @@ See the file COPYING.txt for details
          versionDate="2007-01-21"
          xml:lang="it">definisce una gamma di valori di attributi rappresentati
     come espressione regolare</desc>
-  <dataRef name="token"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="token"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-03-18"
             xml:lang="en">

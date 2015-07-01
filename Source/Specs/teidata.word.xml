@@ -31,9 +31,9 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi espressi come singola parola o singolo token</desc>
-	<content>
-  <dataRef name="token" restriction="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
-	</content>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="token" restriction="(\p{L}|\p{N}|\p{P}|\p{S})+"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2005-10-18"
             xml:lang="en">

@@ -28,7 +28,9 @@ See the file COPYING.txt for details
          versionDate="2007-05-04"
          xml:lang="es">define la gama de valores de atributos posibles para
     representar la duración en el tiempo usando formatos estàndards ISO 8601.</desc>
-  <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="token" restriction="[0-9.,DHMPRSTWYZ/:+\-]+"/>
+   </content>
   <exemplum xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <time dur-iso="PT0,75H">three-quarters of an hour</time>

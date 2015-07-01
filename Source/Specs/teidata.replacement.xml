@@ -11,7 +11,9 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2013-04-14"
          xml:lang="en">defines attribute values which contain a replacement template.</desc>
-  <textNode/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <textNode/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-04-14"
             xml:lang="en">

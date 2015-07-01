@@ -11,7 +11,9 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2013-04-13"
          xml:lang="en">defines attribute values which contain an XML name.</desc>
-  <dataRef name="NCName"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="NCName"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-04-13"
             xml:lang="en">

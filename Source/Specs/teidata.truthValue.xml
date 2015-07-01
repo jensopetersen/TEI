@@ -31,7 +31,9 @@ value.</desc>
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi usati per esprimere un valore di verità</desc>
-  <dataRef name="boolean"/>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef name="boolean"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2013-11-01"
             xml:lang="en">

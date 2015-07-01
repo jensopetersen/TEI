@@ -33,11 +33,10 @@ See the file COPYING.txt for details
   <desc xmlns:rng="http://relaxng.org/ns/structure/1.0"
          versionDate="2007-01-21"
          xml:lang="it">definisce la gamma di valori di attributi espressi come
-    singola parola o token tratto da una lista di possibilità
-  attestate</desc>
-  <content>
-    <dataRef key="teidata.word"/>
-  </content>
+    singola parola o token tratto da una lista di possibilità attestate</desc>
+  <content xmlns:rng="http://relaxng.org/ns/structure/1.0">
+      <dataRef key="teidata.word"/>
+   </content>
   <remarks xmlns:rng="http://relaxng.org/ns/structure/1.0"
             versionDate="2014-11-19"
             xml:lang="en">
