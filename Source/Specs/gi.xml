@@ -24,7 +24,7 @@ $Id$
       <memberOf key="model.phrase.xml"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.name"/>
+      <dataRef key="teidata.name"/>
   </content>
   <attList>
       <attDef ident="scheme" usage="opt">
