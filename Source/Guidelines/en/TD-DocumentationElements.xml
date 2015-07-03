@@ -767,7 +767,7 @@ to mark any technical term, thus:
 
         <p>Schematron is an ISO standard (<ref target="#ISO-19757-3">ISO/IEC 19757-3:2006</ref>)
           which defines a simple XML vocabulary for a <soCalled>assertion language</soCalled>,
-          together with a RELAXNG to validate it. The Schematron assertion language provides a
+          together with a RELAX NG to validate it. The Schematron assertion language provides a
           powerful way of expressing constraints on the content of any XML document in addition to
           those provided by other schema languages. Such constraints can be embedded within a TEI
           schema specification using the methods exemplified in this chapter. An ODD processor will
@@ -926,7 +926,7 @@ to mark any technical term, thus:
         attributes: <specList>
           <specDesc key="attDef" atts="usage"/>
           <specDesc key="datatype" atts="minOccurs maxOccurs"/>
-          <specDesc key="dataRef" atts="minOccurs maxOccurs"/>
+          <specDesc key="dataRef"/>
           <specDesc key="defaultVal"/>
           <specDesc key="valDesc"/>
           <specDesc key="valList"/>
@@ -952,7 +952,7 @@ to mark any technical term, thus:
             <item>by referencing its URI within some other datatype library.</item>
           </list>The TEI defines a number of datatypes, each with an identifier beginning
             <code>teidata.</code>, which are used in preference to the datatypes available natively
-          from a target schema such as RELAXNG or W3C Schema since the facilities provided by
+          from a target schema such as RELAX NG or W3C Schema since the facilities provided by
           different schema languages vary so widely. The TEI datatypes available are described in
           section <ptr target="#DTYPES"/> above. Note that each is, of necessity, mapped eventually
           to an externally defined datatype such as W3C Schema's <ident>text</ident> or
@@ -973,8 +973,10 @@ to mark any technical term, thus:
             </attDef></egXML> or, equivalently : <egXML xmlns="http://www.tei-c.org/ns/Examples"
               ><attDef ident="target">
               <desc versionDate="2010-05-02" xml:lang="en">specifies the destination of the
-                reference by supplying one or more URI References</desc>
-              <dataRef minOccurs="1" maxOccurs="unbounded" key="teidata.pointer"/>
+              reference by supplying one or more URI References</desc>
+	      <datatype  minOccurs="1" maxOccurs="unbounded">
+		<dataRef  key="teidata.pointer"/>
+	      </datatype>
             </attDef></egXML> indicating that the <att>target</att> attribute may take any number of
           values, each being of the same datatype, defined by the TEI <ident>data.pointer</ident>
           macro or the TEI data specification <ident>teidata.pointer</ident> respectively. As is
