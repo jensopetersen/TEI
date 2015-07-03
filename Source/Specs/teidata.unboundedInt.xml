@@ -11,6 +11,6 @@ See the file COPYING.txt for details
 integer or the string "unbounded".</desc>
 <content>    <alternate>
 <dataRef name="nonNegativeInteger"/>
-  <valList><valItem ident="unbounded"/></valList>
+  <valList type="closed"><valItem ident="unbounded"/></valList>
 </alternate>  </content>
 </dataSpec>
