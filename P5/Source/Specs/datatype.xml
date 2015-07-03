@@ -20,6 +20,7 @@ $Id$
   </classes>
   <content>
       <choice xmlns="http://relaxng.org/ns/structure/1.0">
+	<ref name="textNode"/>
 	<ref name="dataRef"/>
 <!--         <ref name="macroRef"/>-->
          <oneOrMore>

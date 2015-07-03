@@ -23,6 +23,7 @@ $Id$
   <desc versionDate="2007-01-21" xml:lang="it">contiene uno o più elementi <gi>valItem</gi> che
     definiscono i valori possibili per un attributo</desc>
   <classes>
+      <memberOf key="model.contentPart"/>
       <memberOf key="att.global"/>
       <memberOf key="att.combinable"/>
   </classes>
