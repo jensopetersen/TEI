@@ -49,7 +49,7 @@ $Id:  $
   pointing to some other resource, either within the current document
   or elsewhere.</desc>
             <content>
-               <dataNode name="anyURI"/>
+               <dataRef name="anyURI"/>
             </content>
          </dataSpec>
          </egXML>

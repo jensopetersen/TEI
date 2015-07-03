@@ -48,10 +48,12 @@ $Id$
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <dataSpec ident="teidata.probCert">
             <desc versionDate="2015-05-20" xml:lang="en">defines a datatype which may indicate either probability or certainty.</desc>
-            <alternate>
+            <content>
+	      <alternate>
                <dataRef key="teidata.probability"/>
                <dataRef key="teidata.certainty"/>
             </alternate>
+</content>
          </dataSpec>
       </egXML>
   </exemplum>
