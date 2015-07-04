@@ -99,7 +99,7 @@ $Id$
                <attDef ident="type" usage="opt">
                   <desc>the language of the code</desc>
                   <datatype>
-                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+                     <dataRef key="teidata.enumerated"/>
                   </datatype>
                </attDef>
             </attList>
@@ -120,7 +120,7 @@ $Id$
                <attDef ident="type" usage="opt">
                   <desc>la langue du code</desc>
                   <datatype>
-                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+                     <dataRef key="teidata.enumerated"/>
                   </datatype>
                </attDef>
             </attList>
@@ -142,7 +142,7 @@ $Id$
                <attDef ident="type" usage="opt">
                   <desc>規則的表達方式</desc>
                   <datatype>
-                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+                     <dataRef key="teidata.enumerated"/>
                   </datatype>
                </attDef>
             </attList>
