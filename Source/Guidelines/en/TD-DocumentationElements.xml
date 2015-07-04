@@ -942,9 +942,8 @@ to mark any technical term, thus:
       <div type="div4" xml:id="TD-datatypes">
         <head>Datatypes</head>
         <p>The <soCalled>datatype</soCalled> (i.e. the kind of value) for an attribute may be
-          specified using either of the elements <gi>datatype</gi> and <gi>dataRef</gi> ; note
-          however that the former is retained only for compatibility with P5 releases prior to 2.8,
-          and may be removed at a later release. A datatype may be defined in any of the following
+          specified using  the elements <gi>datatype</gi> and
+	  <gi>dataRef</gi>. A datatype may be defined in any of the following
           three ways: <list>
             <item>by reference to the identifier of an existing TEI datatype definition; </item>
             <item>by use of its name in the widely used schema datatype library maintained by the
@@ -962,15 +961,7 @@ to mark any technical term, thus:
         <p>Attributes <att>minOccurs</att> and <att>maxOccurs</att> are available for the case where
           an attribute may take more than one value of the type specified. For example, the
             <att>target</att> attribute provided by the <ident type="class">att.pointing</ident>
-          class has the following declaration: <egXML xmlns="http://www.tei-c.org/ns/Examples"
-              ><attDef ident="target">
-              <desc versionDate="2010-05-02" xml:lang="en">specifies the destination of the
-                reference by supplying one or more URI References</desc>
-              <datatype minOccurs="1" maxOccurs="unbounded">
-                <rng:ref  xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  name="data.pointer"/>
-              </datatype>
-            </attDef></egXML> or, equivalently : <egXML xmlns="http://www.tei-c.org/ns/Examples"
+          class has the following declaration:  <egXML xmlns="http://www.tei-c.org/ns/Examples"
               ><attDef ident="target">
               <desc versionDate="2010-05-02" xml:lang="en">specifies the destination of the
               reference by supplying one or more URI References</desc>
@@ -978,13 +969,13 @@ to mark any technical term, thus:
 		<dataRef  key="teidata.pointer"/>
 	      </datatype>
             </attDef></egXML> indicating that the <att>target</att> attribute may take any number of
-          values, each being of the same datatype, defined by the TEI <ident>data.pointer</ident>
-          macro or the TEI data specification <ident>teidata.pointer</ident> respectively. As is
+          values, each being of the same datatype, namely the TEI data specification <ident>teidata.pointer</ident>. As is
           usual in XML, multiple values for a single attribute are separated by one or more white
           space characters. Hence, values such as <code>#a #b #c</code> or <code>http://example.org
             http://www.tei-c.org/index.xml</code> may be supplied.
           <!-- add discussion of string vs multiple tokens? -->
         </p>
+
       
       </div>
       <div type="div4" xml:id="TDATTvs">
@@ -1009,12 +1000,12 @@ than 100</q>. -->
             <gi>constraintSpec</gi> element described in section <ptr target="#TDTAG"/> must be
           used. For example, to specify that an imaginary attribute <att scheme="imaginary"
             >ageAtDeath</att> must take positive integer values less than 150, the datatype <ident
-            type="datatype">data.numeric</ident> might be used in combination with a
+            type="datatype">teidata.numeric</ident> might be used in combination with a
             <gi>constraintSpec</gi> such as the following: <egXML
             xmlns="http://www.tei-c.org/ns/Examples">
             <attDef ident="age">
               <desc>age in years at death</desc>
-              <datatype>data.numeric</datatype>
+              <datatype><dataRef key="teidata.numeric"/></datatype>
               <constraintSpec ident="lessThan150" scheme="isoschematron">
                 <constraint>
                   <assert xmlns="http://purl.oclc.org/dsdl/schematron" test=". &lt; 150"> age at
@@ -1035,7 +1026,7 @@ than 100</q>. -->
           </egXML>
         </p>
         <p>Where the possible values for an attribute can be enumerated, the datatype
-            <ident>data.enumerated</ident> should be used, together with a <gi>valList</gi> element
+            <ident>teidata.enumerated</ident> should be used, together with a <gi>valList</gi> element
           to specify the values and their significance, as in the following example: <egXML
             xmlns="http://www.tei-c.org/ns/Examples"><valList type="closed">
               <valItem ident="req"><gloss>required</gloss></valItem>
@@ -1055,7 +1046,7 @@ than 100</q>. -->
                 as an entrance or exit.</desc>
               <desc versionDate="2007-12-20" xml:lang="ko">예를 들어 입장 또는 퇴장과 같은, 이동의 특성을 기술한다.</desc>
               <datatype>
-                <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+                <dataRef key="teidata.enumerated"/>
               </datatype>
               <valList type="open">
                 <valItem ident="entrance">
@@ -1073,7 +1064,7 @@ than 100</q>. -->
                   <desc versionDate="2007-12-20" xml:lang="ko">등장인물이 무대에서 이동한다.</desc>
                 </valItem>
               </valList>
-            </attDef></egXML> The datatype will be <ident type="datatype">data.enumerated</ident> in
+            </attDef></egXML> The datatype will be <ident type="datatype">teidata.enumerated</ident> in
           either case.</p>
         <p>The <gi>valList</gi> element may also be used (as a child of the <gi>content</gi>
           element) to put constraints on the permitted content of an element, as noted at <ptr
