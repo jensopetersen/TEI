@@ -90,7 +90,7 @@ $Id$
   <exemplum versionDate="2008-04-06" xml:lang="fr">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <datatype>
-            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+            <dataRef key="teidata.enumerated"/>
          </datatype>
       </egXML>
   </exemplum>
@@ -99,21 +99,7 @@ $Id$
         dans ses valeurs, comme le cas de l'attribut <att>target</att> dans <gi>join</gi>.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <datatype minOccurs="2" maxOccurs="unbounded">
-            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pointer"/>
-         </datatype>
-      </egXML>
-  </exemplum>
-  <exemplum xml:lang="zh-TW">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <datatype minOccurs="2" maxOccurs="unbounded">
-            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pointer"/>
-         </datatype>
-      </egXML>
-  </exemplum>
-  <exemplum xml:lang="und">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <datatype>
-            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.enumerated"/>
+            <dataRef key="teidata.pointer"/>
          </datatype>
       </egXML>
   </exemplum>
@@ -124,14 +110,14 @@ $Id$
     <gi>join</gi>.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <datatype minOccurs="2" maxOccurs="unbounded">
-            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.pointer"/>
+            <dataRef key="teidata.pointer"/>
          </datatype>
       </egXML>
   </exemplum>
-  <remarks versionDate="2005-10-10" xml:lang="en">
-      <p>In the TEI scheme, most datatypes are expressed using
-    pre-defined TEI macros, which map a name in the form
-    <code>data.xxxx</code> to a RelaxNG or WSD defined datatype.</p>
+  <remarks versionDate="2015-07-04" xml:lang="en">
+      <p>In the TEI scheme, most datatypes are specified by a
+      <gi>dataSpec</gi> element,  which maps a name in the form
+    <code>teidata.xxxx</code> to a WSD defined datatype.</p>
   </remarks>
   <remarks xml:lang="fr" versionDate="2007-06-12">
       <p>Dans le schéma TEI, la plupart des types de données sont exprimées en utilisant des
