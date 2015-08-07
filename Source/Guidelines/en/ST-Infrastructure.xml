@@ -1031,16 +1031,15 @@ one, or vice versa, should be done with care. </p>
           href="../../Specs/model.featureVal.single.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.entryPart.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.entryPart.top.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.eventLike.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.global.edit.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.global.spoken.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.divPart.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.persStateLike.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.persEventLike.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.personLike.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.personPart.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.placeNamePart.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.placeStateLike.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.placeEventLike.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/model.orgPart.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude"
           href="../../Specs/model.publicationStmtPart.agency.xml"/>
@@ -1196,7 +1195,7 @@ entities in the XML DTD fragments.--></p>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.count.xml"/>
       </specGrp>
       <p>Next, the datatypes used for attributes which are intended to hold normalized dates or
-        times, durations, or truth values: <specList>
+        times, durations, truth values, and language identifiers: <specList>
           <specDesc key="teidata.duration.w3c"/>
           <specDesc key="teidata.duration.iso"/>
           <specDesc key="teidata.temporal.w3c"/>
@@ -1209,8 +1208,8 @@ entities in the XML DTD fragments.--></p>
       <p>Note that in each of these cases the values used are those recommended by existing
         international standards: ISO 8601 as profiled by <title ref="#XSD2">XML Schema Part 2:
           Datatypes Second Edition</title> in the case of durations, times, and date; W3C Schema
-        datatypes in the case of truth values; BCP 47 in the case of language; and ISO 5218 in the
-        case of sex.</p>
+        datatypes in the case of truth values; and BCP 47 in the case of language<!--; and ISO 5218 in the
+        case of sex-->.</p>
       <specGrp xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:id="DTYPES-2"
         n="Normalized Datatypes">
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.temporal.w3c.xml"/>
@@ -1320,7 +1319,6 @@ entities in the XML DTD fragments.--></p>
         n="Complex datatypes">
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.probCert.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/teidata.unboundedInt.xml"/>
-        
       </specGrp>
     </div>
   </div>
@@ -1351,4 +1349,35 @@ entities in the XML DTD fragments.--></p>
       similarly predeclares a number of patterns with null (<soCalled>notAllowed</soCalled>) values.
       These issues are further discussed in chapter <ptr target="#IM"/>.</p>
   </div>
+<div><head>Deprecated datatype macros</head>
+<p>The following datatype macros are retained for backwards compatibility but will be removed at a future release.</p>
+
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.certainty.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.probability.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.numeric.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.interval.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.percentage.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.count.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.temporal.w3c.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.duration.w3c.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.truthValue.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xTruthValue.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.language.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.namespace.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.outputMeasurement.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pattern.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.point.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.pointer.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.version.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.versionNumber.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.replacement.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xpath.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.word.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.sex.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.text.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.name.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.xmlName.xml"/>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/data.enumerated.xml"/>
+     
+</div>
 </div>
