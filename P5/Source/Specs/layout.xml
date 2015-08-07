@@ -28,9 +28,9 @@ $Id$
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.specialPara"/>
   </content>
   <attList>
-      <attDef ident="columns">
+      <attDef ident="columns" >
          <gloss versionDate="2007-06-12" xml:lang="fr">colonnes</gloss>
-         <desc versionDate="2005-01-14" xml:lang="en">specifies the number of columns per page</desc>
+         <desc versionDate="2005-01-14" xml:lang="en">necessarily specifies the number of columns per page</desc>
          <desc versionDate="2007-12-20" xml:lang="ko">페이지 당 열의 수를 명시한다.</desc>
          <desc versionDate="2007-05-02" xml:lang="zh-TW">說明每頁的欄數</desc>
          <desc versionDate="2008-04-05" xml:lang="ja">ページ中の段数を示す．</desc>

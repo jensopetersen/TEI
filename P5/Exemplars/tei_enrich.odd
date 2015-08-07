@@ -1868,16 +1868,19 @@ vertical bounding lines ruled in hard point on hair side. Text lines ruled
 faintly in lead. Remains of prickings in upper, lower, and outer (for 8 lines 
 of text only) margins.</p></layout>
 </egXML></p>
-<p>Note that if (as in the last example above) no value is given for
-the <att>columns</att> attribute, the assumption is that there is a
-single column of writing on each page.
-<specGrp xml:id="spec5">
+<p>Note that <!-- if (as in the last example above) no--> a value must always be supplied 
+for the <att>columns</att> attribute; in this customization, the attribute is mandatory.
+<!--  assumption is that there is a
+single column of writing on each page.-->
+<!--<specGrp xml:id="spec5">
 <elementSpec ident="layout" mode="change" module="msdescription">
 <attList>
   <attDef ident="columns" mode="change" usage="req"/>
 </attList>
 </elementSpec>
-</specGrp></p>
+</specGrp>
+-->
+</p>
 <p>Where multiple <gi>layout</gi> elements are supplied, the scope for
 each specification can be indicated by means of <gi>locus</gi>
 elements within the content of the element, as in the following
@@ -2972,9 +2975,9 @@ item</desc></valItem>
 <elementSpec ident="layout" mode="change" module="msdescription">
 <attList>
   <attDef ident="columns" mode="change" usage="req">
-      <datatype minOccurs="1" maxOccurs="2">
+<!--      <datatype minOccurs="1" maxOccurs="2">
         <rng:ref name="data.count"/>
-      </datatype>
+      </datatype>-->
   </attDef>
 </attList>
 </elementSpec>
