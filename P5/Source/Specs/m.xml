@@ -25,17 +25,17 @@ $Id$
       <memberOf key="att.typed"/>
   </classes>
   <content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-         <choice>
-            <text/>
-            <ref name="model.gLike"/>
-            <ref name="model.hiLike"/>
-            <ref name="seg"/>
-            <ref name="m"/>
-            <ref name="c"/>
-            <ref name="model.global"/>
-         </choice>
-      </zeroOrMore>
+    <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
+      <choice>
+        <text/>
+        <ref name="model.gLike"/>
+        <ref name="model.hiLike"/>
+        <ref name="seg"/>
+        <ref name="m"/>
+        <ref name="c"/>
+        <ref name="model.global"/>
+      </choice>
+    </zeroOrMore>
   </content>
   <attList>
       <attDef ident="baseForm" usage="opt">

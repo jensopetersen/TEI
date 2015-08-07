@@ -1030,9 +1030,8 @@ than 100</q>. -->
           to specify the values and their significance, as in the following example: <egXML
             xmlns="http://www.tei-c.org/ns/Examples"><valList type="closed">
               <valItem ident="req"><gloss>required</gloss></valItem>
-             
               <valItem ident="rec"><gloss>recommended</gloss></valItem>
-                 <valItem ident="opt"><gloss>optional</gloss></valItem>
+              <valItem ident="opt"><gloss>optional</gloss></valItem>
             </valList>
           </egXML> Note the use of the <gi>gloss</gi> element here to explain the otherwise less
           than obvious meaning of the codes used for these values. Since this value list specifies
