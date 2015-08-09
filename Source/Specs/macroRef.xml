@@ -16,6 +16,7 @@
       <memberOf key="model.oddRef"/>
       <memberOf key="model.contentPart"/>
       <memberOf key="att.readFrom"/>
+      <memberOf key="att.repeatable"/><!-- added to support current definition of macro.anyXML, but not sure it's needed LB -->
   </classes>
   <content>
       <rng:empty/>

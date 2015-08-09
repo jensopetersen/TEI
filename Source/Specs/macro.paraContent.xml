@@ -23,7 +23,7 @@ $Id$
   <desc versionDate="2007-05-04" xml:lang="es">define el contenido de párrafos y elementos similares.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">definisce il contenuto di paragrafi ed elementi simili</desc>
   <content>
-    <rng:zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+<!--    <rng:zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
       <rng:choice>
         <rng:text/>
         <rng:ref name="model.gLike"/>
@@ -34,7 +34,17 @@ $Id$
         <rng:ref name="l"/>
       </rng:choice>
     </rng:zeroOrMore>
-  </content>
+  -->
+<alternate minOccurs="0" maxOccurs="unbounded">
+ <textNode/>
+<classRef key="model.gLike"/>
+<classRef key="model.phrase"/>
+<classRef key="model.inter"/>
+<classRef key="model.global"/>
+ <elementRef key="lg"/>
+ <elementRef key="l"/>
+ </alternate>
+</content>
   <listRef>
     <ptr target="#STEC"/>
   </listRef>
