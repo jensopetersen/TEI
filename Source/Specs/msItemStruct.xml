@@ -1,13 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             module="msdescription"
-             xml:id="MSITEMSTRUCT"
-             ident="msItemStruct">
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: msItemStruct.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="msdescription" xml:id="MSITEMSTRUCT" ident="msItemStruct">
   <gloss versionDate="2007-07-04" xml:lang="en">structured manuscript item</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">구조화된 원고 항목</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
@@ -31,66 +28,66 @@ $Id$
       <memberOf key="att.msExcerpt"/>
   </classes>
   <content>
-      <group xmlns="http://relaxng.org/ns/structure/1.0">
-         <optional>
-            <choice>
-               <ref name="locus"/>
-               <ref name="locusGrp"/>
-            </choice>
-         </optional>
-         <choice>
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-            <group>
-               <zeroOrMore>
-                  <ref name="author"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="respStmt"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="title"/>
-               </zeroOrMore>
-               <optional>
-                  <ref name="rubric"/>
-               </optional>
-               <optional>
-                  <ref name="incipit"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="msItemStruct"/>
-               </zeroOrMore>
-               <optional>
-                  <ref name="explicit"/>
-               </optional>
-               <optional>
-                  <ref name="finalRubric"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="colophon"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="decoNote"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="listBibl"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="bibl"/>
-                     <ref name="biblStruct"/>
-                  </choice>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="model.noteLike"/>
-               </zeroOrMore>
-               <optional>
-                  <ref name="textLang"/>
-               </optional>
-            </group>
-         </choice>
-      </group>
+      <sequence>
+         
+            <alternate minOccurs="0">
+               <elementRef key="locus"/>
+               <elementRef key="locusGrp"/>
+            </alternate>
+         
+         <alternate>
+            
+               <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+            
+            <sequence>
+               
+                  <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="rubric" minOccurs="0"/>
+               
+               
+                  <elementRef key="incipit" minOccurs="0"/>
+               
+               
+                  <elementRef key="msItemStruct" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="explicit" minOccurs="0"/>
+               
+               
+                  <elementRef key="finalRubric" minOccurs="0"/>
+               
+               
+                  <elementRef key="colophon" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="listBibl" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <alternate minOccurs="0" maxOccurs="unbounded">
+                     <elementRef key="bibl"/>
+                     <elementRef key="biblStruct"/>
+                  </alternate>
+               
+               
+                  <classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/>
+               
+               
+                  <elementRef key="textLang" minOccurs="0"/>
+               
+            </sequence>
+         </alternate>
+      </sequence>
   </content>
   <attList>
       <attDef ident="class">

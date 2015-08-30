@@ -1,15 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           xmlns="http://www.tei-c.org/ns/1.0"
-           module="tei"
-           xml:id="TYPED"
-           type="atts"
-           ident="att.typed">
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: att.typed.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns="http://www.tei-c.org/ns/1.0" module="tei" xml:id="TYPED" type="atts" ident="att.typed">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes which can be used to classify or subclassify elements in any way.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">요소의 분류 또는 하위분류에서 사용될 수 있는 속성을 제공한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">提供可依任何方法將元素分類或次要分類的一般屬性。</desc>
@@ -41,9 +36,7 @@ $Id$
             <dataRef key="teidata.enumerated"/>
          </datatype>
          <exemplum xml:lang="en">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"
-                   source="#NZETC01"
-                   xml:lang="en">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#NZETC01" xml:lang="en">
                <div type="verse">
                   <head>Night in Tarras</head>
                   <lg type="stanza">

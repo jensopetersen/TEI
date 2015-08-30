@@ -1,12 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             module="namesdates"
-             ident="occupation">
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: occupation.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="namesdates" ident="occupation">
   <gloss versionDate="2008-12-09" xml:lang="fr">activité</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains an informal description of a person's trade, profession or occupation.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개인의 직업에 대한 비공식적 기술을 포함한다.</desc>
@@ -24,7 +22,7 @@ $Id$
       <memberOf key="att.naming"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq"/>
+      <macroRef key="macro.phraseSeq"/>
   </content>
   <attList>
       <attDef ident="scheme" usage="opt">

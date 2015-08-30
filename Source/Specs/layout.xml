@@ -1,13 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             module="msdescription"
-             xml:id="LAYOUT"
-             ident="layout">
+$Date: 2015-08-07 16:42:04 +0100 (Fri, 07 Aug 2015) $
+$Id: layout.xml 13320 2015-08-07 15:42:04Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="msdescription" xml:id="LAYOUT" ident="layout">
   <gloss versionDate="2007-06-12" xml:lang="fr">mise en page</gloss>
   <desc versionDate="2005-01-14" xml:lang="en" xml:id="layout.desc">describes how text is laid out on the
   page, including information about any ruling, pricking, or other
@@ -25,10 +22,10 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.specialPara"/>
+      <macroRef key="macro.specialPara"/>
   </content>
   <attList>
-      <attDef ident="columns" >
+      <attDef ident="columns">
          <gloss versionDate="2007-06-12" xml:lang="fr">colonnes</gloss>
          <desc versionDate="2005-01-14" xml:lang="en">necessarily specifies the number of columns per page</desc>
          <desc versionDate="2007-12-20" xml:lang="ko">페이지 당 열의 수를 명시한다.</desc>

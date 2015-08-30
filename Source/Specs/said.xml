@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright TEI Consortium.
     Dual-licensed under CC-by and BSD2 licences
     See the file COPYING.txt for details
-    $Date$
-    $Id$
+    $Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+    $Id: said.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="core" ident="said">
   <gloss versionDate="2007-07-18" xml:lang="en">speech or thought</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">대화 또는 사고</gloss>
@@ -31,7 +31,7 @@
       <memberOf key="att.ascribed"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.specialPara"/>
+      <macroRef key="macro.specialPara"/>
   </content>
   <attList>
       <attDef ident="aloud" usage="opt">
@@ -50,9 +50,7 @@
          </datatype>
          <defaultVal>unknown</defaultVal>
          <exemplum xml:lang="en">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"
-                   xml:lang="en"
-                   source="#COHQQ-eg-28">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en" source="#COHQQ-eg-28">
                <p>
             Celia thought privately, <said aloud="false">Dorothea quite despises Sir James Chettam; 
             I believe she would not accept him.</said> Celia felt that this was a pity. 
@@ -96,9 +94,7 @@
          </datatype>
          <defaultVal>true</defaultVal>
          <exemplum xml:lang="en">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"
-                   xml:lang="en"
-                   source="#SAID-DIRECT-eg-1">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="en" source="#SAID-DIRECT-eg-1">
           <!-- in the header -->
           <editorialDecl>
                   <quotation marks="none"/>

@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
--->
-<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-<elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="analysis" ident="s">
+$Date: 2015-08-07 18:40:45 +0100 (Fri, 07 Aug 2015) $
+$Id: s.xml 13321 2015-08-07 17:40:45Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="analysis" ident="s">
   <gloss versionDate="2005-01-14" xml:lang="en">s-unit</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">s-단위</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">句子單元</gloss>
@@ -38,128 +35,128 @@ $Id$
          elegance of the simple content model + Schematron constraint is preferable to this horrible 
          content model.
     -->
-    <rng:zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
-      <rng:choice>
-        <rng:text/>
-        <rng:ref name="model.gLike"/>
-        <rng:ref name="model.global"/>
+    
+      <alternate minOccurs="0" maxOccurs="unbounded">
+        <textNode/>
+        <classRef key="model.gLike"/>
+        <classRef key="model.global"/>
         <!--All members from model.phrase except for <s>. -->
-        <rng:ref name="binaryObject"/>
-        <rng:ref name="formula"/>
-        <rng:ref name="graphic"/>
-        <rng:ref name="media"/>
-        <rng:ref name="code"/>
-        <rng:ref name="distinct"/>
-        <rng:ref name="emph"/>
-        <rng:ref name="foreign"/>
-        <rng:ref name="gloss"/>
-        <rng:ref name="ident"/>
-        <rng:ref name="mentioned"/>
-        <rng:ref name="soCalled"/>
-        <rng:ref name="term"/>
-        <rng:ref name="title"/>
-        <rng:ref name="hi"/>
-        <rng:ref name="caesura"/>
-        <rng:ref name="rhyme"/>
-        <rng:ref name="address"/>
-        <rng:ref name="affiliation"/>
-        <rng:ref name="email"/>
-        <rng:ref name="date"/>
-        <rng:ref name="time"/>
-        <rng:ref name="depth"/>
-        <rng:ref name="dim"/>
-        <rng:ref name="geo"/>
-        <rng:ref name="height"/>
-        <rng:ref name="measure"/>
-        <rng:ref name="measureGrp"/>
-        <rng:ref name="num"/>
-        <rng:ref name="width"/>
-        <rng:ref name="name"/>
-        <rng:ref name="orgName"/>
-        <rng:ref name="persName"/>
-        <rng:ref name="geogFeat"/>
-        <rng:ref name="offset"/>
-        <rng:ref name="addName"/>
-        <rng:ref name="forename"/>
-        <rng:ref name="genName"/>
-        <rng:ref name="nameLink"/>
-        <rng:ref name="roleName"/>
-        <rng:ref name="surname"/>
-        <rng:ref name="bloc"/>
-        <rng:ref name="country"/>
-        <rng:ref name="district"/>
-        <rng:ref name="geogName"/>
-        <rng:ref name="placeName"/>
-        <rng:ref name="region"/>
-        <rng:ref name="settlement"/>
-        <rng:ref name="climate"/>
-        <rng:ref name="location"/>
-        <rng:ref name="population"/>
-        <rng:ref name="state"/>
-        <rng:ref name="terrain"/>
-        <rng:ref name="trait"/>
-        <rng:ref name="idno"/>
-        <rng:ref name="lang"/>
-        <rng:ref name="rs"/>
-        <rng:ref name="abbr"/>
-        <rng:ref name="am"/>
-        <rng:ref name="choice"/>
-        <rng:ref name="ex"/>
-        <rng:ref name="expan"/>
-        <rng:ref name="subst"/>
-        <rng:ref name="add"/>
-        <rng:ref name="app"/>
-        <rng:ref name="corr"/>
-        <rng:ref name="damage"/>
-        <rng:ref name="del"/>
-        <rng:ref name="handShift"/>
-        <rng:ref name="mod"/>
-        <rng:ref name="orig"/>
-        <rng:ref name="redo"/>
-        <rng:ref name="reg"/>
-        <rng:ref name="restore"/>
-        <rng:ref name="retrace"/>
-        <rng:ref name="secl"/>
-        <rng:ref name="sic"/>
-        <rng:ref name="supplied"/>
-        <rng:ref name="surplus"/>
-        <rng:ref name="unclear"/>
-        <rng:ref name="undo"/>
-        <rng:ref name="catchwords"/>
-        <rng:ref name="dimensions"/>
-        <rng:ref name="heraldry"/>
-        <rng:ref name="locus"/>
-        <rng:ref name="locusGrp"/>
-        <rng:ref name="material"/>
-        <rng:ref name="objectType"/>
-        <rng:ref name="origDate"/>
-        <rng:ref name="origPlace"/>
-        <rng:ref name="secFol"/>
-        <rng:ref name="signatures"/>
-        <rng:ref name="stamp"/>
-        <rng:ref name="watermark"/>
-        <rng:ref name="att"/>
-        <rng:ref name="gi"/>
-        <rng:ref name="tag"/>
-        <rng:ref name="val"/>
-        <rng:ref name="ptr"/>
-        <rng:ref name="ref"/>
-        <rng:ref name="oRef"/>
-        <rng:ref name="oVar"/>
-        <rng:ref name="pRef"/>
-        <rng:ref name="pVar"/>
-        <rng:ref name="c"/>
-        <rng:ref name="cl"/>
-        <rng:ref name="m"/>
-        <rng:ref name="pc"/>
-        <rng:ref name="phr"/>
+        <elementRef key="binaryObject"/>
+        <elementRef key="formula"/>
+        <elementRef key="graphic"/>
+        <elementRef key="media"/>
+        <elementRef key="code"/>
+        <elementRef key="distinct"/>
+        <elementRef key="emph"/>
+        <elementRef key="foreign"/>
+        <elementRef key="gloss"/>
+        <elementRef key="ident"/>
+        <elementRef key="mentioned"/>
+        <elementRef key="soCalled"/>
+        <elementRef key="term"/>
+        <elementRef key="title"/>
+        <elementRef key="hi"/>
+        <elementRef key="caesura"/>
+        <elementRef key="rhyme"/>
+        <elementRef key="address"/>
+        <elementRef key="affiliation"/>
+        <elementRef key="email"/>
+        <elementRef key="date"/>
+        <elementRef key="time"/>
+        <elementRef key="depth"/>
+        <elementRef key="dim"/>
+        <elementRef key="geo"/>
+        <elementRef key="height"/>
+        <elementRef key="measure"/>
+        <elementRef key="measureGrp"/>
+        <elementRef key="num"/>
+        <elementRef key="width"/>
+        <elementRef key="name"/>
+        <elementRef key="orgName"/>
+        <elementRef key="persName"/>
+        <elementRef key="geogFeat"/>
+        <elementRef key="offset"/>
+        <elementRef key="addName"/>
+        <elementRef key="forename"/>
+        <elementRef key="genName"/>
+        <elementRef key="nameLink"/>
+        <elementRef key="roleName"/>
+        <elementRef key="surname"/>
+        <elementRef key="bloc"/>
+        <elementRef key="country"/>
+        <elementRef key="district"/>
+        <elementRef key="geogName"/>
+        <elementRef key="placeName"/>
+        <elementRef key="region"/>
+        <elementRef key="settlement"/>
+        <elementRef key="climate"/>
+        <elementRef key="location"/>
+        <elementRef key="population"/>
+        <elementRef key="state"/>
+        <elementRef key="terrain"/>
+        <elementRef key="trait"/>
+        <elementRef key="idno"/>
+        <elementRef key="lang"/>
+        <elementRef key="rs"/>
+        <elementRef key="abbr"/>
+        <elementRef key="am"/>
+        <elementRef key="choice"/>
+        <elementRef key="ex"/>
+        <elementRef key="expan"/>
+        <elementRef key="subst"/>
+        <elementRef key="add"/>
+        <elementRef key="app"/>
+        <elementRef key="corr"/>
+        <elementRef key="damage"/>
+        <elementRef key="del"/>
+        <elementRef key="handShift"/>
+        <elementRef key="mod"/>
+        <elementRef key="orig"/>
+        <elementRef key="redo"/>
+        <elementRef key="reg"/>
+        <elementRef key="restore"/>
+        <elementRef key="retrace"/>
+        <elementRef key="secl"/>
+        <elementRef key="sic"/>
+        <elementRef key="supplied"/>
+        <elementRef key="surplus"/>
+        <elementRef key="unclear"/>
+        <elementRef key="undo"/>
+        <elementRef key="catchwords"/>
+        <elementRef key="dimensions"/>
+        <elementRef key="heraldry"/>
+        <elementRef key="locus"/>
+        <elementRef key="locusGrp"/>
+        <elementRef key="material"/>
+        <elementRef key="objectType"/>
+        <elementRef key="origDate"/>
+        <elementRef key="origPlace"/>
+        <elementRef key="secFol"/>
+        <elementRef key="signatures"/>
+        <elementRef key="stamp"/>
+        <elementRef key="watermark"/>
+        <elementRef key="att"/>
+        <elementRef key="gi"/>
+        <elementRef key="tag"/>
+        <elementRef key="val"/>
+        <elementRef key="ptr"/>
+        <elementRef key="ref"/>
+        <elementRef key="oRef"/>
+        <elementRef key="oVar"/>
+        <elementRef key="pRef"/>
+        <elementRef key="pVar"/>
+        <elementRef key="c"/>
+        <elementRef key="cl"/>
+        <elementRef key="m"/>
+        <elementRef key="pc"/>
+        <elementRef key="phr"/>
         <!--<s> removed here. -->
-        <rng:ref name="seg"/>
-        <rng:ref name="w"/>
-        <rng:ref name="specDesc"/>
-        <rng:ref name="specList"/>
-      </rng:choice>
-    </rng:zeroOrMore>
+        <elementRef key="seg"/>
+        <elementRef key="w"/>
+        <elementRef key="specDesc"/>
+        <elementRef key="specList"/>
+      </alternate>
+    
   </content>
   <constraintSpec ident="noNestedS" scheme="isoschematron">
     <constraint>

@@ -1,13 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             module="gaiji"
-             ident="unicodeName"
-             xml:id="UNICODENAME">
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: unicodeName.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="gaiji" ident="unicodeName" xml:id="UNICODENAME">
   <gloss versionDate="2007-07-04" xml:lang="en">unicode property name</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">유니코드 특성명</gloss>
   <gloss versionDate="2007-05-02" xml:lang="zh-TW">統一碼性質名稱</gloss>
@@ -28,7 +25,7 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <text xmlns="http://relaxng.org/ns/structure/1.0"/>
+      <textNode/>
       <!--s:assert> some schematron rules here</s:assert-->
   </content>
   <attList>

@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: eTree.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="nets" ident="eTree">
   <gloss versionDate="2005-01-14" xml:lang="en">embedding tree</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">내포 수형도</gloss>
@@ -25,19 +25,19 @@ $Id$
       <memberOf key="att.typed"/>
   </classes>
   <content>
-      <group xmlns="http://relaxng.org/ns/structure/1.0">
-         <optional>
-            <ref name="label"/>
-         </optional>
-         <zeroOrMore>
-            <choice>
-               <ref name="eTree"/>
-               <ref name="triangle"/>
-               <ref name="eLeaf"/>
-               <ref name="model.ptrLike"/>
-            </choice>
-         </zeroOrMore>
-      </group>
+      <sequence>
+         
+            <elementRef key="label" minOccurs="0"/>
+         
+         
+            <alternate minOccurs="0" maxOccurs="unbounded">
+               <elementRef key="eTree"/>
+               <elementRef key="triangle"/>
+               <elementRef key="eLeaf"/>
+               <classRef key="model.ptrLike"/>
+            </alternate>
+         
+      </sequence>
   </content>
   <attList>
       <attDef ident="value" usage="opt">

@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   Copyright TEI Consortium. 
   Dual-licensed under CC-by and BSD2 licences 
   See the file COPYING.txt for details
-  $Date$
-  $Id$
+  $Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+  $Id: person.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="namesdates" ident="person">
   <gloss versionDate="2008-12-09" xml:lang="fr">personne</gloss>
   <desc versionDate="2005-12-14" xml:lang="en">provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a
@@ -24,17 +24,17 @@
       <memberOf key="att.sortable"/>
   </classes>
   <content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0">
-         <oneOrMore>
-            <ref name="model.pLike"/>
-         </oneOrMore>
-         <zeroOrMore>
-            <choice>
-               <ref name="model.personPart"/>
-               <ref name="model.global"/>
-            </choice>
-         </zeroOrMore>
-      </choice>
+      <alternate>
+         
+            <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+         
+         
+            <alternate minOccurs="0" maxOccurs="unbounded">
+               <classRef key="model.personPart"/>
+               <classRef key="model.global"/>
+            </alternate>
+         
+      </alternate>
   </content>
   <attList>
       <attDef ident="role" usage="opt">

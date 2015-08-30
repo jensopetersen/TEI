@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: macroSpec.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="macroSpec">
   <gloss versionDate="2007-07-04" xml:lang="en">macro specification</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">매크로 명시</gloss>
@@ -25,32 +25,32 @@ $Id$
       <memberOf key="att.identified"/>
   </classes>
   <content>
-      <rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
-         <rng:zeroOrMore>
-            <rng:choice>
-               <rng:ref name="model.glossLike"/>
-               <rng:ref name="model.descLike"/>
-            </rng:choice>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:choice>
-               <rng:ref name="content"/>
-               <rng:ref name="valList"/>
-            </rng:choice>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="constraintSpec"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="exemplum"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="remarks"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="listRef"/>
-         </rng:zeroOrMore>
-      </rng:group>
+      <sequence>
+         
+            <alternate minOccurs="0" maxOccurs="unbounded">
+               <classRef key="model.glossLike"/>
+               <classRef key="model.descLike"/>
+            </alternate>
+         
+         
+            <alternate minOccurs="0" maxOccurs="unbounded">
+               <elementRef key="content"/>
+               <elementRef key="valList"/>
+            </alternate>
+         
+         
+            <elementRef key="constraintSpec" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="exemplum" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="remarks" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="listRef" minOccurs="0" maxOccurs="unbounded"/>
+         
+      </sequence>
   </content>
   <attList>
       <attDef ident="type" usage="opt">
@@ -86,10 +86,7 @@ $Id$
   </attList>
   <exemplum xml:lang="und">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                    module="tei"
-                    type="pe"
-                    ident="macro.phraseSeq">
+         <macroSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="pe" ident="macro.phraseSeq">
             <content>
                <rng:zeroOrMore>
                   <rng:choice>

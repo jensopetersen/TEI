@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-30 19:21:32 +0100 (Tue, 30 Jun 2015) $
+$Id: language.xml 13291 2015-06-30 18:21:32Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="header" ident="language">
   <gloss versionDate="2009-01-05" xml:lang="fr">langue</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">characterizes a single language or sublanguage used within a text.</desc>
@@ -21,7 +21,7 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq.limited"/>
+      <macroRef key="macro.phraseSeq.limited"/>
   </content>
   <attList>
       <attDef ident="ident" usage="req">

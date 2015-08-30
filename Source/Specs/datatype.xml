@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-07-04 18:10:23 +0100 (Sat, 04 Jul 2015) $
+$Id: datatype.xml 13304 2015-07-04 17:10:23Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="datatype">
   <gloss versionDate="2007-06-12" xml:lang="fr">type de données</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">specifies the declared value for an attribute, by referring to
@@ -19,16 +19,16 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0">
-	<ref name="textNode"/>
-	<ref name="dataRef"/>
+      <alternate>
+	<elementRef key="textNode"/>
+	<elementRef key="dataRef"/>
 <!--         <ref name="macroRef"/>-->
-         <oneOrMore>
-            <group>
-               <ref name="macro.schemaPattern"/>
-            </group>
-         </oneOrMore>
-      </choice>
+         
+            
+               <macroRef key="macro.schemaPattern"/>
+            
+         
+      </alternate>
   </content>
   <attList>
       <attDef ident="minOccurs">

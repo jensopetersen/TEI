@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-07-04 18:10:23 +0100 (Sat, 04 Jul 2015) $
+$Id: attList.xml 13304 2015-07-04 17:10:23Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="attList">
   <gloss versionDate="2007-06-12" xml:lang="fr">liste d'attributs</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">contains documentation for all the attributes associated with this element, as a series of
@@ -21,13 +21,13 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-         <choice>
-            <ref name="attRef"/>
-            <ref name="attDef"/>
-            <ref name="attList"/>
-         </choice>
-      </oneOrMore>
+      
+         <alternate minOccurs="1" maxOccurs="unbounded">
+            <elementRef key="attRef"/>
+            <elementRef key="attDef"/>
+            <elementRef key="attList"/>
+         </alternate>
+      
   </content>
   <attList>
       <attDef ident="org">

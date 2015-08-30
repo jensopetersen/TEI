@@ -1,13 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright TEI Consortium.
     Dual-licensed under CC-by and BSD2 licences
     See the file COPYING.txt for details
-    $Date$
-    $Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0"
-           module="tei"
-           type="atts"
-           ident="att.cReferencing">
+    $Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+    $Id: att.cReferencing.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0" module="tei" type="atts" ident="att.cReferencing">
   <desc versionDate="2012-09-23" xml:lang="en">provides an attribute which may be used to supply a
   <term>canonical reference</term> as a means of identifying the
   target of a pointer.</desc>

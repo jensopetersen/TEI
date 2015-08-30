@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: iNode.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="nets" ident="iNode">
   <gloss versionDate="2005-01-14" xml:lang="en">intermediate (or internal) node</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">중간 (또는 내부) 노드</gloss>
@@ -22,9 +22,9 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0">
-         <ref name="label"/>
-      </optional>
+      
+         <elementRef key="label" minOccurs="0"/>
+      
   </content>
   <attList>
       <attDef ident="value" usage="opt">
@@ -164,22 +164,14 @@ children.</desc>
   </attList>
   <exemplum xml:lang="und">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <iNode xml:id="pt1"
-                children="#GD-UP1"
-                parent="#GD-VB1"
-                follow="#GD-PN1"
-                outDegree="1">
+         <iNode xml:id="pt1" children="#GD-UP1" parent="#GD-VB1" follow="#GD-PN1" outDegree="1">
             <label>PT</label>
          </iNode>
       </egXML>
   </exemplum>
   <exemplum versionDate="2008-04-06" xml:lang="fr">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <iNode xml:id="fr_pt1"
-                children="#fr_GD-UP1"
-                parent="#fr_GD-VB1"
-                follow="#GD-PN1"
-                outDegree="1">
+         <iNode xml:id="fr_pt1" children="#fr_GD-UP1" parent="#fr_GD-VB1" follow="#GD-PN1" outDegree="1">
             <label>PT</label>
          </iNode>
       </egXML>
