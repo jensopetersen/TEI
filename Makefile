@@ -16,7 +16,8 @@ XSL=/usr/share/xml/tei/stylesheet
 # of the next two lines:
 #XSL=../Stylesheets/release/tei-xsl/p5
 #XSL=http://www.tei-c.org/stylesheet/release/xml/tei
-VCS=svn
+#VCS=svn
+VCS=git
 VERSION=`cat VERSION`
 UPVERSION=`cat ../VERSION`
 SAXONJAR=saxon9he.jar
