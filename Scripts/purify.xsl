@@ -32,9 +32,24 @@
     <xsl:template match="rng:ref">
       <xsl:choose>
 	<xsl:when test="starts-with(@name,'model.')">
-	  <classRef key="{@name}">
-	    <xsl:call-template name="maxmin"/>
-	  </classRef>
+
+		<xsl:choose>
+			<xsl:when test="contains(@name,'_')">
+				<classRef key="{substring-before(@name,'_')}">
+					<xsl:attribute name="expand">
+						<xsl:value-of select="substring-after(@name,'_')"/>
+						
+					</xsl:attribute>
+					<xsl:call-template name="maxmin"/>
+				</classRef>
+			</xsl:when>
+		<xsl:otherwise>
+		
+		<classRef key="{@name}">
+			<xsl:call-template name="maxmin"/>
+		</classRef>
+		</xsl:otherwise>
+			</xsl:choose>
 	</xsl:when>
 	<xsl:when test="starts-with(@name,'att.')">
 	  <classRef key="{@name}">
@@ -60,12 +75,15 @@
     </xsl:template>
 
     <xsl:template match="rng:group">
-    	<xsl:if test="count(*)>1">
+    	<xsl:choose><xsl:when test="count(*)>1">
     		<sequence>
 	<xsl:call-template name="maxmin"/>
 	<xsl:apply-templates/>
-      </sequence></xsl:if>
+      </sequence></xsl:when>
+    		<xsl:otherwise><xsl:apply-templates/>
+    		</xsl:otherwise></xsl:choose>
     </xsl:template>
+	
     
     <xsl:template match="rng:text">
       <textNode/>
