@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-07-06 23:31:34 +0100 (Mon, 06 Jul 2015) $
+$Id: content.xml 13305 2015-07-06 22:31:34Z rahtz $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="tagdocs" ident="content">
   <gloss versionDate="2007-07-04" xml:lang="en">content model</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">내용 모델</gloss>
@@ -25,14 +25,14 @@ $Id$
       <memberOf key="att.global"/>
   </classes>
   <content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0">
-         <oneOrMore>
-	           <ref name="macro.anyXML"/>
-         </oneOrMore>
-         <zeroOrMore>
-	           <ref name="model.contentPart"/>
-         </zeroOrMore>
-      </choice>
+      <alternate>
+         
+	           <macroRef key="macro.anyXML" minOccurs="1" maxOccurs="unbounded"/>
+         
+         
+	           <classRef key="model.contentPart" minOccurs="0" maxOccurs="unbounded"/>
+         
+      </alternate>
   </content>
   <attList>
     <attDef ident="autoPrefix">

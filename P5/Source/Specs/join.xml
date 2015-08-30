@@ -1,4 +1,4 @@
-<!-- Copyright TEI Consortium. Dual-licensed under CC-by and BSD2 licences See the file COPYING.txt for details $Date$ $Id$ --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="linking" ident="join">
+<?xml version="1.0" encoding="UTF-8"?><!-- Copyright TEI Consortium. Dual-licensed under CC-by and BSD2 licences See the file COPYING.txt for details $Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $ $Id: join.xml 13282 2015-06-28 21:06:02Z louburnard $ --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="linking" ident="join">
   <gloss versionDate="2009-10-06" xml:lang="fr">jointure</gloss>
   <desc versionDate="2005-01-14" xml:lang="en">identifies a possibly fragmented segment of text, by pointing at the possibly discontiguous elements which compose it.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트를 구성하고 있는 비연소적 요소를 가리킴으로 텍스트의 파편화된 분절을 식별한다.</desc>
@@ -14,12 +14,12 @@
       <memberOf key="model.global.meta"/>
   </classes>
   <content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-         <choice>
-            <ref name="model.descLike"/>
-            <ref name="model.certLike"/>
-         </choice>
-      </zeroOrMore>
+      
+         <alternate minOccurs="0" maxOccurs="unbounded">
+            <classRef key="model.descLike"/>
+            <classRef key="model.certLike"/>
+         </alternate>
+      
   </content>
   <constraintSpec ident="joinTargets3" scheme="isoschematron">
       <constraint>
@@ -135,9 +135,7 @@ You must supply at least two values for @target on <name/>
                <q>... <l xml:id="fr_frog_l3">It's a new pond.</l>
                </q>
             </p>
-            <join target="#fr_frog_l1 #fr_frog_l2 #fr_frog_l3"
-                  result="lg"
-                  scope="root"/>
+            <join target="#fr_frog_l1 #fr_frog_l2 #fr_frog_l3" result="lg" scope="root"/>
          </sp>
       </egXML>
       <p xmlns:teix="http://www.tei-c.org/ns/Examples">The <gi>join</gi> element here identifies a linegroup (<gi>lg</gi>) comprising the three
@@ -174,10 +172,7 @@ You must supply at least two values for @target on <name/>
                </item>
             </list> which, when they occur in Negro dialect, should probably be considered as
           borrowings from other varieties of English.</p>
-         <join result="list"
-               xml:id="fr_LST1"
-               target="#fr_LP1 #fr_LP2 #fr_LP3"
-               scope="branches">
+         <join result="list" xml:id="fr_LST1" target="#fr_LP1 #fr_LP2 #fr_LP3" scope="branches">
             <desc>Sample sentences in Southern speech</desc>
          </join>
       </egXML>
@@ -208,9 +203,7 @@ You must supply at least two values for @target on <name/>
                <q>... <l xml:id="zh-tw_frog_l3">有新的池塘</l> 
                </q>
             </p>
-            <join target="#zh-tw_frog_l1 #zh-tw_frog_l2 #zh-tw_frog_l3"
-                  result="lg"
-                  scope="root"/>
+            <join target="#zh-tw_frog_l1 #zh-tw_frog_l2 #zh-tw_frog_l3" result="lg" scope="root"/>
          </sp>
       </egXML>
   </exemplum>
@@ -230,10 +223,7 @@ You must supply at least two values for @target on <name/>
                   <s>阿梅麗的奇妙命運</s>
                </item>
             </list>。</p>
-         <join result="list"
-               xml:id="zh-tw_LST1"
-               target="#zh-tw_LP1 #zh-tw_LP2 #zh-tw_LP3"
-               scope="branches">
+         <join result="list" xml:id="zh-tw_LST1" target="#zh-tw_LP1 #zh-tw_LP2 #zh-tw_LP3" scope="branches">
             <desc>電影Le Fabuleux Destin d'Amélie Poulain的中港台譯名</desc>
          </join>
       </egXML>
@@ -261,10 +251,7 @@ You must supply at least two values for @target on <name/>
                   <s>I've done went</s>
                </item>
             </list> which, when they occur in Negro dialect, should probably be considered as borrowings from other varieties of English.</p>
-         <join result="list"
-               xml:id="LST1"
-               target="#LP1 #LP2 #LP3"
-               scope="branches">
+         <join result="list" xml:id="LST1" target="#LP1 #LP2 #LP3" scope="branches">
             <desc>Sample sentences in Southern speech</desc>
          </join>
       </egXML>

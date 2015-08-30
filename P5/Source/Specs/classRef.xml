@@ -1,15 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright TEI Consortium.
     Dual-licensed under CC-by and BSD2 licences
     See the file COPYING.txt for details
-    $Date$
-    $Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             xmlns:s="http://www.ascc.net/xml/schematron"
-             xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-             xmlns:rng="http://relaxng.org/ns/structure/1.0"
-             module="tagdocs"
-             ident="classRef">
+    $Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+    $Id: classRef.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://www.ascc.net/xml/schematron" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tagdocs" ident="classRef">
   <desc versionDate="2010-07-06" xml:lang="en">points to the specification for an attribute or model class which is to be included in a schema</desc>
   <classes>
       <memberOf key="att.global"/>
@@ -19,7 +14,7 @@
       <memberOf key="att.readFrom"/>
   </classes>
   <content>
-      <rng:empty/>
+      
   </content>
   <attList>
       <attDef ident="key" usage="req">
@@ -88,12 +83,9 @@ the value <val>sequenceOptionalRepeatable</val>.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <schemaSpec ident="myTEIe" start="TEI">
             <moduleRef key="tei"/>
-            <moduleRef key="core"
-                       include="abbr add core addrLine address author bibl biblScope choice cit corr date del desc divGen editor emph expan foreign gap gloss graphic head hi index item l label lb lg list listBibl  mentioned milestone name note num orig p pb ptr pubPlace publisher q ref reg relatedItem resp respStmt rs sic soCalled sp speaker stage teiCorpus term time title unclear"/>
-            <moduleRef key="header"
-                       include="authority availability catRef category change classCode classDecl creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc funder idno keywords langUsage language licence notesStmt principal profileDesc projectDesc publicationStmt refsDecl revisionDesc samplingDecl seriesStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt"/>
-            <moduleRef key="textstructure"
-                       include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group opener postscript salute signed text titlePage titlePart trailer"/>
+            <moduleRef key="core" include="abbr add core addrLine address author bibl biblScope choice cit corr date del desc divGen editor emph expan foreign gap gloss graphic head hi index item l label lb lg list listBibl  mentioned milestone name note num orig p pb ptr pubPlace publisher q ref reg relatedItem resp respStmt rs sic soCalled sp speaker stage teiCorpus term time title unclear"/>
+            <moduleRef key="header" include="authority availability catRef category change classCode classDecl creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc funder idno keywords langUsage language licence notesStmt principal profileDesc projectDesc publicationStmt refsDecl revisionDesc samplingDecl seriesStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt"/>
+            <moduleRef key="textstructure" include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group opener postscript salute signed text titlePage titlePart trailer"/>
             <classRef key="att.global.facs"/>
          </schemaSpec>
       </egXML>

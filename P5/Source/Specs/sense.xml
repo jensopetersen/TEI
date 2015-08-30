@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: sense.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="dictionaries" ident="sense">
   <desc versionDate="2007-10-18" xml:lang="en">groups together all information relating to one word sense in a dictionary entry, for
     example definitions, examples, and translation equivalents.</desc>
@@ -24,16 +24,16 @@ $Id$
       <memberOf key="att.lexicographic"/>
   </classes>
   <content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-         <choice>
-            <text/>
-            <ref name="model.gLike"/>
-            <ref name="sense"/>
-            <ref name="model.entryPart.top"/>
-            <ref name="model.phrase"/>
-            <ref name="model.global"/>
-         </choice>
-      </zeroOrMore>
+      
+         <alternate minOccurs="0" maxOccurs="unbounded">
+            <textNode/>
+            <classRef key="model.gLike"/>
+            <elementRef key="sense"/>
+            <classRef key="model.entryPart.top"/>
+            <classRef key="model.phrase"/>
+            <classRef key="model.global"/>
+         </alternate>
+      
   </content>
   <attList>
       <attDef ident="level" usage="opt">

@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: span.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="analysis" ident="span">
   <desc versionDate="2005-01-14" xml:lang="en">associates an interpretative annotation directly with a span of text.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">해석적 부호를 텍스트의 일정 부분과 직접적으로 연결시킨다.</desc>
@@ -22,7 +22,7 @@ $Id$
       <memberOf key="model.global.meta"/>
   </classes>
   <content>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.phraseSeq.limited"/>
+      <macroRef key="macro.phraseSeq.limited"/>
   </content>
   <constraintSpec ident="targetfrom" scheme="isoschematron">
       <constraint>
@@ -46,8 +46,7 @@ If @to is supplied on <name/>, @from must be supplied as well</report>
   </constraintSpec>
   <constraintSpec ident="tofrom" scheme="isoschematron">
       <constraint>
-         <report xmlns="http://purl.oclc.org/dsdl/schematron"
-                 test="contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')">
+         <report xmlns="http://purl.oclc.org/dsdl/schematron" test="contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')">
 The attributes @to and @from on <name/> may each contain only a single value</report>
       </constraint>
   </constraintSpec>

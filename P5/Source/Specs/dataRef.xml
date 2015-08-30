@@ -1,15 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright TEI Consortium.
     Dual-licensed under CC-by and BSD2 licences
     See the file COPYING.txt for details
     $Date:$
     $Id:$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0"
-             xmlns:s="http://www.ascc.net/xml/schematron"
-             xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-             xmlns:rng="http://relaxng.org/ns/structure/1.0"
-             module="tagdocs"
-             ident="dataRef">
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://www.ascc.net/xml/schematron" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tagdocs" ident="dataRef">
   <desc versionDate="2010-05-14" xml:lang="en">identifies the datatype of an attribute value, either by referencing an item in an externally defined datatype library, or by
     pointing to a TEI-defined data specification</desc>
   <classes>
@@ -19,7 +14,7 @@
       <memberOf key="att.readFrom"/>
   </classes>
   <content>
-      <rng:empty/>
+      
   </content>
    <attList> 
       <attList org="choice">
@@ -54,8 +49,7 @@
    </attList>
   <exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <schemaSpec ident="myTEI"
-                     source="http://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
+         <schemaSpec ident="myTEI" source="http://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
         <!-- ... -->
         <dataRef key="data.text" source="tei:1.5.0"/>
             <!-- ... -->
@@ -64,8 +58,7 @@
   </exemplum>
   <exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <schemaSpec ident="myTEI"
-                     source="http://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
+         <schemaSpec ident="myTEI" source="http://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
         <!-- ... -->
         <dataRef name="float"/>
             <!-- ... -->

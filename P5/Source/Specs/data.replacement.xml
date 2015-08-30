@@ -3,8 +3,8 @@
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-05-28 02:03:01 +0100 (Thu, 28 May 2015) $
+$Id: data.replacement.xml 13221 2015-05-28 01:03:01Z sbauman $
 -->
 <?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
 

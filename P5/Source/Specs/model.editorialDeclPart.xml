@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
--->
-<?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
-<classSpec xmlns="http://www.tei-c.org/ns/1.0"
-           module="tei"
-           type="model"
-           ident="model.editorialDeclPart">
+$Date: 2014-09-09 23:44:07 +0100 (Tue, 09 Sep 2014) $
+$Id: model.editorialDeclPart.xml 13000 2014-09-09 22:44:07Z martindholmes $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0" module="tei" type="model" ident="model.editorialDeclPart">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which may be used inside <gi>editorialDecl</gi> and appear multiple times.</desc>
   <desc versionDate="2009-01-05" xml:lang="fr">regroupe des éléments qui peuvent être employés dans
     l'élément <gi>editorialDecl</gi> et souvent à de nombreuses reprises.</desc>

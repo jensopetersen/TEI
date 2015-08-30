@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: recording.xml 13282 2015-06-28 21:06:02Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="spoken" ident="recording">
   <gloss versionDate="2005-01-14" xml:lang="en">recording event</gloss>
   <gloss versionDate="2009-01-05" xml:lang="fr">enregistrement</gloss>
@@ -32,12 +32,12 @@ a public broadcast.</desc>
       <memberOf key="att.duration"/>
   </classes>
   <content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-         <choice>
-            <ref name="model.recordingPart"/>
-            <ref name="model.pLike"/>
-         </choice>
-      </zeroOrMore>
+      
+         <alternate minOccurs="0" maxOccurs="unbounded">
+            <classRef key="model.recordingPart"/>
+            <classRef key="model.pLike"/>
+         </alternate>
+      
   </content>
   <attList>
       <attDef ident="type" usage="opt">

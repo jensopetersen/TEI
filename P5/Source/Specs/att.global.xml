@@ -1,14 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0"
-           module="tei"
-           xml:id="GLOBAL"
-           type="atts"
-           ident="att.global">
+$Date: 2015-06-30 14:32:22 +0100 (Tue, 30 Jun 2015) $
+$Id: att.global.xml 13288 2015-06-30 13:32:22Z rahtz $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0" module="tei" xml:id="GLOBAL" type="atts" ident="att.global">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes common to all elements in the TEI encoding scheme.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">TEI 부호화 스키마의 모든 요소에 공통 속성을 제공한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於TEI編碼標準中的所有元素。</desc>
@@ -240,8 +236,7 @@ and that a single TEI document may contain texts in many languages.</p>
             </egXML>
          </exemplum>
          <exemplum versionDate="2010-02-26" xml:lang="fr">
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"
-                   source="#fr-ex-Bibliog_Renaissance_Ital">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#fr-ex-Bibliog_Renaissance_Ital">
                <div type="bibl">
                   <head>La Renaissance italienne, bibliographie sélective</head>
                   <listBibl>

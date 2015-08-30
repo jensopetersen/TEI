@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
@@ -13,33 +13,33 @@ $Id:  $
       <memberOf key="att.identified"/>
   </classes>
   <content>
-      <rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
-         <rng:zeroOrMore>
-            <rng:choice>
-               <rng:ref name="model.glossLike"/>
-               <rng:ref name="model.descLike"/>
-            </rng:choice>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore><!-- why ? -->
-        <rng:choice>
-               <rng:ref name="content"/> 
+      <sequence>
+         
+            <alternate minOccurs="0" maxOccurs="unbounded">
+               <classRef key="model.glossLike"/>
+               <classRef key="model.descLike"/>
+            </alternate>
+         
+         <!-- why ? -->
+        <alternate minOccurs="0" maxOccurs="unbounded">
+               <elementRef key="content"/> 
                <!-- need to constrain this -->
-          <rng:ref name="valList"/>
-            </rng:choice>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="constraintSpec"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="exemplum"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="remarks"/>
-         </rng:zeroOrMore>
-         <rng:zeroOrMore>
-            <rng:ref name="listRef"/>
-         </rng:zeroOrMore>
-      </rng:group>
+          <elementRef key="valList"/>
+            </alternate>
+         
+         
+            <elementRef key="constraintSpec" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="exemplum" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="remarks" minOccurs="0" maxOccurs="unbounded"/>
+         
+         
+            <elementRef key="listRef" minOccurs="0" maxOccurs="unbounded"/>
+         
+      </sequence>
   </content>
   <exemplum xml:lang="und">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">

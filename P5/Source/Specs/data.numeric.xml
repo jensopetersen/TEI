@@ -3,8 +3,8 @@
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2014-09-09 23:44:07 +0100 (Tue, 09 Sep 2014) $
+$Id: data.numeric.xml 13000 2014-09-09 22:44:07Z martindholmes $
 -->
 <macroSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" module="tei" type="dt" ident="data.numeric">
   <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used for numeric values.</desc>

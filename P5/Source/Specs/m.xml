@@ -1,9 +1,9 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
+$Date: 2015-08-07 18:40:45 +0100 (Fri, 07 Aug 2015) $
+$Id: m.xml 13321 2015-08-07 17:40:45Z louburnard $
 --><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="analysis" ident="m">
   <gloss versionDate="2005-01-14" xml:lang="en">morpheme</gloss>
   <gloss versionDate="2007-12-20" xml:lang="ko">형태소</gloss>
@@ -25,17 +25,17 @@ $Id$
       <memberOf key="att.typed"/>
   </classes>
   <content>
-    <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-      <choice>
-        <text/>
-        <ref name="model.gLike"/>
-        <ref name="model.hiLike"/>
-        <ref name="seg"/>
-        <ref name="m"/>
-        <ref name="c"/>
-        <ref name="model.global"/>
-      </choice>
-    </zeroOrMore>
+    
+      <alternate minOccurs="0" maxOccurs="unbounded">
+        <textNode/>
+        <classRef key="model.gLike"/>
+        <classRef key="model.hiLike"/>
+        <elementRef key="seg"/>
+        <elementRef key="m"/>
+        <elementRef key="c"/>
+        <classRef key="model.global"/>
+      </alternate>
+    
   </content>
   <attList>
       <attDef ident="baseForm" usage="opt">

@@ -1,15 +1,10 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
 Copyright TEI Consortium. 
 Dual-licensed under CC-by and BSD2 licences 
 See the file COPYING.txt for details
-$Date$
-$Id$
---><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0"
-           xmlns:dcr="http://www.isocat.org/ns/dcr"
-           module="tei"
-           xml:id="DATCAT"
-           type="atts"
-           ident="att.datcat">
+$Date: 2015-06-28 22:06:02 +0100 (Sun, 28 Jun 2015) $
+$Id: att.datcat.xml 13282 2015-06-28 21:06:02Z louburnard $
+--><?xml-model href="http://tei.it.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?><classSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:dcr="http://www.isocat.org/ns/dcr" module="tei" xml:id="DATCAT" type="atts" ident="att.datcat">
   <desc versionDate="2013-03-29" xml:lang="en">provides the <att>dcr:datacat</att> and
   <att>dcr:ValueDatacat</att> attributes which are used to 
     align XML elements or attributes with the appropriate Data Categories (DCs) defined by the ISO 12620:2009 
@@ -39,10 +34,7 @@ $Id$
       Nijmegen.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <fs>
-            <f name="POS"
-               dcr:datcat="http://www.isocat.org/datcat/DC-1345"
-               fVal="#commonNoun"
-               dcr:valueDatcat="http://www.isocat.org/datcat/DC-1256"/>
+            <f name="POS" dcr:datcat="http://www.isocat.org/datcat/DC-1345" fVal="#commonNoun" dcr:valueDatcat="http://www.isocat.org/datcat/DC-1256"/>
          </fs>
       </egXML>
   </exemplum>
