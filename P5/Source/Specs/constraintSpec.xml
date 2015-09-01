@@ -15,13 +15,11 @@ $Id: constraintSpec.xml 13321 2015-08-07 17:40:45Z louburnard $
       <memberOf key="model.oddDecl"/>
   </classes>
   <content>
-<sequence>      
          <alternate minOccurs="0" maxOccurs="unbounded">
             <classRef key="model.glossLike"/>
             <classRef key="model.descLike"/>
-         </alternate>
          <elementRef key="constraint"/>
-</sequence>
+         </alternate>
   </content>
   <constraintSpec ident="sch" scheme="isoschematron">
       <desc>Relationship between scheme attribute and contents: Schematron 1.x</desc>
