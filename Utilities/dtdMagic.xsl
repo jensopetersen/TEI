@@ -11,28 +11,28 @@
         
         Parens are added 
           (a) if the classRef is a direct child of <content> (e.g. vNot) 
-          (b) if the classRef is inside a sequence but does not itself repeat 
+          (b) if the classRef is directly inside a sequence but does not itself repeat
     
   LB, 2015-08-31 -->
     
     <xsl:template match="tei:classRef[not(@maxoccurs) or (@maxoccurs = '1')]">
         <xsl:choose>
             <xsl:when test="parent::tei:sequence and ancestor::tei:content">
-                <xsl:message>
+               <!-- <xsl:message>
                     <xsl:value-of select="@key"/>
                     <xsl:text> in </xsl:text>
                     <xsl:value-of select="ancestor::tei:elementSpec/@ident"/>
-                </xsl:message>
+                </xsl:message>-->
                 <sequence>
                     <xsl:copy-of select="."/>
                 </sequence>
             </xsl:when>
             <xsl:when test="parent::tei:content">
-                <xsl:message>
+                <!--<xsl:message>
                     <xsl:value-of select="@key"/>
                     <xsl:text> in </xsl:text>
                     <xsl:value-of select="ancestor::tei:elementSpec/@ident"/>
-                </xsl:message>
+                </xsl:message>-->
                 <sequence>
                     <xsl:copy-of select="."/>
                 </sequence>
