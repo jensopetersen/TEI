@@ -32,14 +32,22 @@
   </content>
   <constraintSpec ident="abstractModel-p" scheme="isoschematron">
     <constraint>
+<<<<<<< HEAD
       <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="(ancestor::tei:p or ancestor::tei:ab) and not(parent::tei:note)">
+=======
+      <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="ancestor::tei:p or ancestor::tei:ab">
+>>>>>>> 9eb66b64181b6c604234d03d889fe61d67e8a700
 Abstract model violation: Paragraphs may not contain other paragraphs or ab elements.
       </report>
     </constraint>
   </constraintSpec>
   <constraintSpec ident="abstractModel-structure-l" scheme="isoschematron">
     <constraint>
+<<<<<<< HEAD
       <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="(ancestor::tei:l or ancestor::tei:lg) and not(parent::tei:note)">
+=======
+      <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="ancestor::tei:l or ancestor::tei:lg">
+>>>>>>> 9eb66b64181b6c604234d03d889fe61d67e8a700
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
       </report>
     </constraint>
