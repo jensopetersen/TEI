@@ -8,7 +8,7 @@ $Id$
 -->
 
 
-<?xml-model href="http://tei.oucs.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<?xml-model href="../../../p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
 
 <div xmlns="http://www.tei-c.org/ns/1.0" type="div1" xml:id="TC" n="19">
   <head>Critical Apparatus</head>
@@ -20,7 +20,10 @@ $Id$
     variants. This chapter defines a module for use in encoding such an apparatus of variants, which
     may be used in conjunction with any of the modules defined in these Guidelines. It also defines
     an element class which provides extra attributes for some elements of the core tag set when this
-    module is selected.</p>
+    module is selected. In printed critical editions, the apparatus takes the form of highly-compressed
+    notes at the bottom of each page. TEI’s critical apparatus module allows variation to be encoded
+    so that such notes may be generated, but it also models the variation so that, for example,
+    interactive editions in which readers can choose which witness readings to display are possible.</p>
 
   <p>Information about variant readings (whether or not represented by a critical apparatus in the
     source text) may be recorded in a series of <term>apparatus entries</term>, each entry
@@ -909,20 +912,18 @@ Group C</soCalled> are themselves first allocated sigla in individual
       <head>The Parallel Segmentation Method</head>
       <p>This method differs from the double end-point attachment method in that all variants at any
         point of the text are expressed as variants on one another. In this method, no two
-        variations can overlap, although they may nest. Thus, the concepts of a base text and of a
-        lemma become unnecessary: the texts compared are divided into matching segments all
+        variations can overlap, although they may nest. The texts compared are divided into matching segments all
         synchronized with one another. This permits direct comparison of any span of text in any
         witness with that in any other witness. It is also very easy with this method for an
         application to extract the full text of any one witness from the apparatus.</p>
       <p>This method will (by definition) always be satisfactory when there are just two texts for
-        comparison (assuming they are in the same language and script). It will also be useful where
-        editors do not wish to privilege a text as the <soCalled>base</soCalled> or when editors
-        wish to present parallel texts. It will become less convenient as traditions become more
-        complex and tension develops between the need to segment on the largest variation found and
-        the need to express the finest detail of agreement between witnesses.</p>
+        comparison (assuming they are in the same language and script). It will however be less convenient 
+        for very complex traditions, where establishing a base text with variations from it is not a 
+        satisfactory goal for the edition, or in some cases where every detail of variation needs
+        to be modeled.</p>
       <p>In the parallel segmentation method, each segment of text on which there is variation is
-        marked by an <gi>app</gi> element; each reading is given in a <gi>rdg</gi> element; if it is
-        desired to single out one reading as preferred, it may be tagged <gi>lem</gi>:
+        marked by an <gi>app</gi> element; the preferred (or base) reading is tagged with <gi>lem</gi>;
+        each reading is given in a <gi>rdg</gi> element:
         <egXML xmlns="http://www.tei-c.org/ns/Examples"><variantEncoding method="parallel-segmentation" location="internal"/>
 <!-- ... -->
   <l n="1">
@@ -1038,14 +1039,14 @@ Group C</soCalled> are themselves first allocated sigla in individual
         
         <!-- In another file -->
         
-        <app from="example.xml#string-range(WBP.1a, 0, 10)">
+        <app from="example.xml#string-range(WP.1a, 0, 10)">
           <lem>Experience</lem>
           <rdg wit="#La">Experiment</rdg>
           <rdg wit="#Ra2">Eryment</rdg>
         </app>
    </egXML>
       </p>
-      <p> If only the <att>from</att> attribute is provided then it should be understood that this
+      <p>If only the <att>from</att> attribute is provided then it should be understood that this
         supplies the location of the textual variance that the apparatus documents. If the
           <att>from</att> attribute contains an XPointer scheme that identifies a range of text (or
         elements) then this is understood to record the starting and ending of the range as in the

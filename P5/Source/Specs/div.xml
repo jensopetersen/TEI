@@ -89,7 +89,8 @@ $Id$
   </content>
   <constraintSpec ident="abstractModel-structure-l" scheme="isoschematron">
     <constraint>
-      <report xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" test="ancestor::tei:l">
+      <report xmlns="http://purl.oclc.org/dsdl/schematron" 
+        xmlns:tei="http://www.tei-c.org/ns/1.0" test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
       </report>
     </constraint>
