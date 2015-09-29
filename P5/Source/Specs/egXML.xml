@@ -32,7 +32,7 @@ $Id: egXML.xml 13282 2015-06-28 21:06:02Z louburnard $
   <content>
       
          
-            <alternate>
+            <alternate maxOccurs="unbounded">
                <textNode/>
                <macroRef key="macro.anyXML"/>
             </alternate>
